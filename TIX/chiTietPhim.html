@@ -1,0 +1,1810 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết phim</title>
+    <!-- BS4.5 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <!-- FONT GOOGLE -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
+    <!-- OWL CAROUSEL CSS -->
+    <link rel="stylesheet" href="./css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./css/owl.theme.default.min.css">
+    <!-- VENOBOX CSS -->
+    <link rel="stylesheet" href="./css/venobox.css">
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <nav class="navbar navbar-expand navbar-light myNavBar">
+            <a class="navbar-brand logoWeb" href="#"><img src="./img/web-logo.png" alt=""></a>
+
+            <div class="collapse navbar-collapse myCollapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Lịch Chiếu<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Cụm rạp</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Tin tức</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Ứng dụng</a>
+                    </li>
+                </ul>
+                <div class="my-2 header__right">
+                    <a href="#">
+                        <img src="./img/avatar.png" alt="avatar đăng nhập">
+                        Đăng nhập
+                    </a>
+                    <a href="#">
+                        <img class="mb-1 ml-2" src="./img/location-header.png" alt="location icon">
+                        <select class="border-0" id="selectLocation">
+                            <option>Hồ Chí Minh</option>
+                            <option>Hà Nội</option>
+                            <option>Đà Nẵng</option>
+                            <option>Hải Phòng</option>
+                            <option>Biên Hòa</option>
+                            <option>Nha Trang</option>
+                            <option>Bình Dương</option>
+                            <option>Phan Thiết</option>
+                            <option>Hạ Long</option>
+                            <option>Cần Thơ</option>
+                            <option>Vũng Tàu</option>
+                            <option>Quy Nhơn</option>
+                            <option>Huế</option>
+                            <option>Long Xuyên</option>
+                            <option>Thái Nguyên</option>
+                            <option>Buôn Ma Thuột</option>
+                            <option>Bắc Giang</option>
+                            <option>Bến Tre</option>
+                            <option>Việt Trì</option>
+                            <option>Ninh Bình</option>
+                            <option>Thái Bình</option>
+                            <option>Vinh</option>
+                            <option>Bảo Lộc</option>
+                            <option>Đà Lạt</option>
+                            <option>Trà Vinh</option>
+                            <option>Yên Bái</option>
+                            <option>Kiên Giang</option>
+                            <option>Vĩnh Long</option>
+                            <option>Cà Mau</option>
+                            <option>Hậu Giang</option>
+                            <option>Tây Ninh</option>
+                            <option>Tuyên Quang</option>
+                            <option>Thanh Hóa</option>
+                            <option>Nam Định</option>
+                            <option>Hải Dương</option>
+                            <option>Gia Lai</option>
+                            <option>Hà Tĩnh</option>
+                            <option>Phú Yên</option>
+                            <option>Bạc Liêu</option>
+                            <option>Long An</option>
+                            <option>Đồng Hới</option>
+                            <option>Hà Nam</option>
+                            <option>Bắc Ninh</option>
+                            <option>Quảng Trị</option>
+                            <option>Kom Tum</option>
+                            <option>Sóc Trăng</option>
+                            <option>Sơn La</option>
+                            <option>Lạng Sơn</option>
+                            <option>Quảng Ngãi</option>
+                            <option>Mỹ Tho</option>
+                            <option>Đồng Tháp</option>
+                            <option>Hưng Yên</option>
+                        </select>
+                    </a>
+                    <!-- <button class="openbtn d-none navbar-toggler" onclick="openNav()" data-toggle="collapse">☰</button> -->
+                    <button class="openbtn navbar-toggler" onclick="openNav()" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div id="mySidepanel" class="sidepanel">
+                        <a href="javascript:void(0)" class="sidepanel__dangNhap" onclick="closeNav()"><span
+                                class="mr-5"> <img class="mr-3" src="./img/avatar.png" alt="avatar đăng nhập">Đăng
+                                nhập</span> > </a>
+                        <a href="#">Lịch chiếu</a>
+                        <a href="#">Cụp rạp</a>
+                        <a href="#">Tin tức</a>
+                        <a href="#">Ứng dụng</a>
+                        <a href="#">Hồ Chí Minh</a>
+                    </div>
+
+                </div>
+
+            </div>
+        </nav>
+    </header>
+    <!-- END HEADER -->
+
+    <!-- DETAIL -->
+    <section class="tix__detail">
+        <div class="tix__styleBlur">
+            <img src="../TIX/img/giaGiaLamChieu_background_detail.jpg" class="posterLandscapeFilm">
+        </div>
+        <div class="tix__styleGradient">
+
+        </div>
+        <div class="tix__content container row">
+            <div class="col-sm-3 showListFilm1__item">
+                <div class="show__img">
+                    <img src="./img/gaiGiaLamChieu_detail.jpg" alt="gai gia lam chieu">
+                    <div class="showListFilm1__overlayIcon">
+                        <a class="venobox myVenobox vbox-item" data-autoplay="true" data-vbtype="video"
+                            href="https://youtu.be/krgcyk2rjFc">
+                            <i class="fa fa-play"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-5 show_detail ml-3">
+                <span>12.03.2021</span>
+                <br>
+                <span class="scheduleFilm__btnRed">C16</span> <span class="show__name">Gái Già Lắm Chiêu V - Những Cuộc
+                    Đời Vương
+                    Giả</span>
+                <span>115 phút - 0 IMDb - 2D/Digital</span>
+                <br>
+                <button class="btnMuaVe">Mua vé</button>
+            </div>
+            <div class="col-sm-2 circleStar">
+                <div class="circleSum">
+                </div>
+                <div id="circlePercent" class="c100 p69">
+                    <div class="circleBorder">
+                    </div>
+                    <span class="ng-binding">6.9</span>
+                    <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                </div>
+                <div class="rate mt-2">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    1/2
+                </div>
+                <div class="row rate__numOfPeople">
+                    <span class="detailMainInfo1 ng-binding" style="margin: auto">111 người đánh giá</span>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- END DETAIL -->
+
+    <!-- SHOWTIME -->
+    <section class="detail__showtime">
+        <div class="movieSchedule2__content container">
+            <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#lichchieu" role="tab"
+                        aria-controls="home" aria-selected="true">Lịch chiếu</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#thongtin" role="tab"
+                        aria-controls="profile" aria-selected="false">Thông tin</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#danhgia" role="tab"
+                        aria-controls="contact" aria-selected="false">Đánh giá</a>
+                </li>
+            </ul>
+            <div class="showInfoDetail tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="lichchieu" role="tabpanel" aria-labelledby="home-tab">
+                    <div class="row">
+                        <div class="col-2 movieSchedule2__listImgCinema mt-2">
+                            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist"
+                                aria-orientation="vertical">
+                                <a onclick="onClickToImage()" class="nav-link active" id="v-pills-bhd-tab" href="#"
+                                    data-toggle="pill" role="tab" aria-controls="v-pills-home" aria-selected="true">
+                                    <img src="./img/bhd.png" alt="">
+                                </a>
+                                <a onclick="onClickToImage()" class="nav-link" id="v-pills-cinestar-tab"
+                                    data-toggle="pill" href="#" role="tab" aria-controls="v-pills-cinestar"
+                                    aria-selected="false">
+                                    <img src="./img/cinestar.png" alt="">
+                                </a>
+                                <a class="nav-link" id="v-pills-dongda-tab" data-toggle="pill" href="#v-pills-dongda"
+                                    role="tab" aria-controls="v-pills-dongda" aria-selected="false">
+                                    <img src="./img/dongdacinema.png" alt="">
+                                </a>
+                                <a class="nav-link" id="v-pills-megags-tab" data-toggle="pill" href="#v-pills-megags"
+                                    role="tab" aria-controls="v-pills-megags" aria-selected="false">
+                                    <img src="./img/megags.png" alt="">
+                                </a>
+                                <a class="nav-link" id="v-pills-dcine-tab" data-toggle="pill" href="#v-pills-dcine"
+                                    role="tab" aria-controls="v-pills-dcine" aria-selected="false">
+                                    <img src="./img/dcine.png" alt="">
+                                </a>
+                                <a class="nav-link" id="v-pills-lotte-tab" data-toggle="pill" href="#v-pills-lotte"
+                                    role="tab" aria-controls="v-pills-lotte" aria-selected="false">
+                                    <img src="./img/lotte.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-10 movieSchedule2__listCinemaAndFilm">
+                            <!-- Làm danh sách các ngày chiếu -->
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                <a class="nav-link active" id="nav-home-tab" data-toggle="tab" href="#" role="tab"
+                                    aria-controls="nav-home" aria-selected="true" onclick="onClickToT3()">
+                                    <p class="mb-0">Thứ 3</p>
+                                    <p class="mb-0 ml-2">13</p>
+                                </a>
+                                <a class="nav-link" id="nav-profile-tab" data-toggle="tab" href="#" role="tab"
+                                    aria-controls="nav-profile" aria-selected="false" onclick="onClickToT3()">
+                                    <p class="mb-0">Thứ 4</p>
+                                    <p class="mb-0 ml-2">14</p>
+                                </a>
+                                <a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-t5" role="tab"
+                                    aria-controls="nav-contact" aria-selected="false">
+                                    <p class="mb-0">Thứ 5</p>
+                                    <p class="mb-0 ml-2">15</p>
+                                </a>
+                                <a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact"
+                                    role="tab" aria-controls="nav-contact" aria-selected="false">
+                                    <p class="mb-0">Thứ 6</p>
+                                    <p class="mb-0 ml-2">16</p>
+                                </a>
+                                <a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact"
+                                    role="tab" aria-controls="nav-contact" aria-selected="false">
+                                    <p class="mb-0">Thứ 7</p>
+                                    <p class="mb-0 ml-2">17</p>
+                                </a>
+                                <a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact"
+                                    role="tab" aria-controls="nav-contact" aria-selected="false">
+                                    <p class="mb-0">Chủ nhật</p>
+                                    <p class="mb-0 ml-2">18</p>
+                                </a>
+                                <a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact"
+                                    role="tab" aria-controls="nav-contact" aria-selected="false">
+                                    <p class="mb-0">Thứ 2</p>
+                                    <p class="mb-0 ml-2">19</p>
+                                </a>
+                                <a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact"
+                                    role="tab" aria-controls="nav-contact" aria-selected="false">
+                                    <p class="mb-0">Thứ 3</p>
+                                    <p class="mb-0 ml-2">20</p>
+                                </a>
+                                <a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact"
+                                    role="tab" aria-controls="nav-contact" aria-selected="false">
+                                    <p class="mb-0">Thứ 4</p>
+                                    <p class="mb-0 ml-2">21</p>
+                                </a>
+                                <a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact"
+                                    role="tab" aria-controls="nav-contact" aria-selected="false">
+                                    <p class="mb-0">Thứ 5</p>
+                                    <p class="mb-0 ml-2">22</p>
+                                </a>
+                                <a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact"
+                                    role="tab" aria-controls="nav-contact" aria-selected="false">
+                                    <p class="mb-0">Thứ 6</p>
+                                    <p class="mb-0 ml-2">23</p>
+                                </a>
+                                <a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact"
+                                    role="tab" aria-controls="nav-contact" aria-selected="false">
+                                    <p class="mb-0">Thứ 6</p>
+                                    <p class="mb-0 ml-2">23</p>
+                                </a>
+                                <a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact"
+                                    role="tab" aria-controls="nav-contact" aria-selected="false">
+                                    <p class="mb-0">Thứ 6</p>
+                                    <p class="mb-0 ml-2">23</p>
+                                </a>
+                                <a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact"
+                                    role="tab" aria-controls="nav-contact" aria-selected="false">
+                                    <p class="mb-0">Thứ 6</p>
+                                    <p class="mb-0 ml-2">23</p>
+                                </a>
+                                <a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact"
+                                    role="tab" aria-controls="nav-contact" aria-selected="false">
+                                    <p class="mb-0">Thứ 6</p>
+                                    <p class="mb-0 ml-2">23</p>
+                                </a>
+                            </div>
+                            <div class="tab-content" id="nav-tabContent">
+                                <div class="tab-pane" id="nav-t3" role="tabpanel" aria-labelledby="nav-home-tab"
+                                    style="display: block;">
+                                    <div class="row">
+                                        <div class="col-sm-12 movieSchedule2__film">
+                                            <div class="film__item">
+                                                <div class="film__detailsTop d-flex">
+                                                    <a class="imgFilm mr-3" href="#">
+                                                        <img src="./img/chong-nguoi-ta-c18-16027366912559_60x60.png"
+                                                            alt="">
+                                                    </a>
+                                                    <a class="infoFilm" href="#">
+                                                        <span class="film__name">
+                                                            <span class="scheduleFilm__btnRed">C18</span>Chồng người ta
+                                                        </span>
+                                                        <p class="film__time">90 phút - TIX 6.5 - IMDb 0</p>
+                                                    </a>
+                                                </div>
+                                                <div class="film__detailsBottom">
+                                                    <p class="film__detailsBottom__eleP mb-0">2D Digital</p>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">23:15</span> ~ 00:45
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <div class="film__item">
+                                                <div class="film__detailsTop d-flex">
+                                                    <a class="imgFilm mr-3" href="#">
+                                                        <img src="./img/gia-dinh-croods-ky-nguyen-moi-the-croods-new-age-p-16057775991222_60x60.png"
+                                                            alt="">
+                                                    </a>
+                                                    <a class="infoFilm" href="#">
+                                                        <span class="film__name">
+                                                            <span class="scheduleFilm__btnGreen">P</span>Gia đình
+                                                            Croods: Kỷ
+                                                            nguyên mới - The Croods: New Age
+                                                        </span>
+                                                        <p class="film__time">95 phút - TIX 8.9 - IMDb 0</p>
+                                                    </a>
+                                                </div>
+                                                <div class="film__detailsBottom">
+                                                    <p class="film__detailsBottom__eleP mb-0">2D Digital</p>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">15:05</span> ~ 16:40
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">21:00</span> ~ 22:35
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="nav-t4" role="tabpanel"
+                                    aria-labelledby="nav-profile-tab">
+                                    <div class="row">
+                                        <div class="col-sm-12 movieSchedule2__film">
+                                            <div class="film__item">
+                                                <div class="film__detailsTop d-flex">
+                                                    <a class="imgFilm mr-3" href="#">
+                                                        <img src="./img/chong-nguoi-ta-c18-16027366912559_60x60.png"
+                                                            alt="">
+                                                    </a>
+                                                    <a class="infoFilm" href="#">
+                                                        <span class="film__name">
+                                                            <span class="scheduleFilm__btnRed">C18</span>Chồng người ta
+                                                        </span>
+                                                        <p class="film__time">90 phút - TIX 6.5 - IMDb 0</p>
+                                                    </a>
+                                                </div>
+                                                <div class="film__detailsBottom">
+                                                    <p class="film__detailsBottom__eleP mb-0">2D Digital</p>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">23:15</span> ~ 00:45
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <div class="film__item">
+                                                <div class="film__detailsTop d-flex">
+                                                    <a class="imgFilm mr-3" href="#">
+                                                        <img src="./img/gia-dinh-croods-ky-nguyen-moi-the-croods-new-age-p-16057775991222_60x60.png"
+                                                            alt="">
+                                                    </a>
+                                                    <a class="infoFilm" href="#">
+                                                        <span class="film__name">
+                                                            <span class="scheduleFilm__btnGreen">P</span>Gia đình
+                                                            Croods: Kỷ
+                                                            nguyên mới - The Croods: New Age
+                                                        </span>
+                                                        <p class="film__time">95 phút - TIX 8.9 - IMDb 0</p>
+                                                    </a>
+                                                </div>
+                                                <div class="film__detailsBottom">
+                                                    <p class="film__detailsBottom__eleP mb-0">2D Digital</p>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">15:05</span> ~ 16:40
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">21:00</span> ~ 22:35
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <div class="film__item">
+                                                <div class="film__detailsTop d-flex">
+                                                    <a class="imgFilm mr-3" href="#">
+                                                        <img src="./img/thanh-guom-diet-quy-chuyen-tau-vo-tan_60x60.png"
+                                                            alt="">
+                                                    </a>
+                                                    <a class="infoFilm" href="#">
+                                                        <span class="film__name">
+                                                            <span class="scheduleFilm__btnRed">C13</span>Thanh gươm diệt
+                                                            quỷ:
+                                                            Chuyến tàu vô tận - Demon Slayer The Movie: Mugen Train
+                                                        </span>
+                                                        <p class="film__time">117 phút - TIX 8.4 - IMDb 0</p>
+                                                    </a>
+                                                </div>
+                                                <div class="film__detailsBottom">
+                                                    <p class="film__detailsBottom__eleP mb-0">2D Digital</p>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">14:30</span> ~ 16:27
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">15:35</span> ~ 17:32
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">16:45</span> ~ 18:42
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">17:50</span> ~ 19:47
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">19:00</span> ~ 20:57
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">20:00</span> ~ 21:57
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">21:05</span> ~ 23:02
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">22:15</span> ~ 00:12
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">23:10</span> ~ 01:07
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <div class="film__item">
+                                                <div class="film__detailsTop d-flex">
+                                                    <a class="imgFilm mr-3" href="#">
+                                                        <img src="./img/thanh-guom-diet-quy-chuyen-tau-vo-tan_60x60.png"
+                                                            alt="">
+                                                    </a>
+                                                    <a class="infoFilm" href="#">
+                                                        <span class="film__name">
+                                                            <span class="scheduleFilm__btnRed">C13</span>Thanh gươm diệt
+                                                            quỷ:
+                                                            Chuyến tàu vô tận - Demon Slayer The Movie: Mugen Train
+                                                        </span>
+                                                        <p class="film__time">117 phút - TIX 8.4 - IMDb 0</p>
+                                                    </a>
+                                                </div>
+                                                <div class="film__detailsBottom">
+                                                    <p class="film__detailsBottom__eleP mb-0">2D Digital</p>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">14:30</span> ~ 16:27
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">15:35</span> ~ 17:32
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">16:45</span> ~ 18:42
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">17:50</span> ~ 19:47
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">19:00</span> ~ 20:57
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">20:00</span> ~ 21:57
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">21:05</span> ~ 23:02
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">22:15</span> ~ 00:12
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">23:10</span> ~ 01:07
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="nav-t5" role="tabpanel"
+                                    aria-labelledby="nav-contact-tab">
+                                    <div class="row">
+                                        <div class="col-sm-12 movieSchedule2__film">
+                                            <div class="film__item">
+                                                <div class="film__detailsTop d-flex">
+                                                    <a class="imgFilm mr-3" href="#">
+                                                        <img src="./img/chong-nguoi-ta-c18-16027366912559_60x60.png"
+                                                            alt="">
+                                                    </a>
+                                                    <a class="infoFilm" href="#">
+                                                        <span class="film__name">
+                                                            <span class="scheduleFilm__btnRed">C18</span>Chồng người ta
+                                                        </span>
+                                                        <p class="film__time">90 phút - TIX 6.5 - IMDb 0</p>
+                                                    </a>
+                                                </div>
+                                                <div class="film__detailsBottom">
+                                                    <p class="film__detailsBottom__eleP mb-0">2D Digital</p>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">23:15</span> ~ 00:45
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <div class="film__item">
+                                                <div class="film__detailsTop d-flex">
+                                                    <a class="imgFilm mr-3" href="#">
+                                                        <img src="./img/gia-dinh-croods-ky-nguyen-moi-the-croods-new-age-p-16057775991222_60x60.png"
+                                                            alt="">
+                                                    </a>
+                                                    <a class="infoFilm" href="#">
+                                                        <span class="film__name">
+                                                            <span class="scheduleFilm__btnGreen">P</span>Gia đình
+                                                            Croods: Kỷ
+                                                            nguyên mới - The Croods: New Age
+                                                        </span>
+                                                        <p class="film__time">95 phút - TIX 8.9 - IMDb 0</p>
+                                                    </a>
+                                                </div>
+                                                <div class="film__detailsBottom">
+                                                    <p class="film__detailsBottom__eleP mb-0">2D Digital</p>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">15:05</span> ~ 16:40
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">21:00</span> ~ 22:35
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <div class="film__item">
+                                                <div class="film__detailsTop d-flex">
+                                                    <a class="imgFilm mr-3" href="#">
+                                                        <img src="./img/thanh-guom-diet-quy-chuyen-tau-vo-tan_60x60.png"
+                                                            alt="">
+                                                    </a>
+                                                    <a class="infoFilm" href="#">
+                                                        <span class="film__name">
+                                                            <span class="scheduleFilm__btnRed">C13</span>Thanh gươm diệt
+                                                            quỷ:
+                                                            Chuyến tàu vô tận - Demon Slayer The Movie: Mugen Train
+                                                        </span>
+                                                        <p class="film__time">117 phút - TIX 8.4 - IMDb 0</p>
+                                                    </a>
+                                                </div>
+                                                <div class="film__detailsBottom">
+                                                    <p class="film__detailsBottom__eleP mb-0">2D Digital</p>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">14:30</span> ~ 16:27
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">15:35</span> ~ 17:32
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">16:45</span> ~ 18:42
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">17:50</span> ~ 19:47
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">19:00</span> ~ 20:57
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">20:00</span> ~ 21:57
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">21:05</span> ~ 23:02
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">22:15</span> ~ 00:12
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">23:10</span> ~ 01:07
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <div class="film__item">
+                                                <div class="film__detailsTop d-flex">
+                                                    <a class="imgFilm mr-3" href="#">
+                                                        <img src="./img/thanh-guom-diet-quy-chuyen-tau-vo-tan_60x60.png"
+                                                            alt="">
+                                                    </a>
+                                                    <a class="infoFilm" href="#">
+                                                        <span class="film__name">
+                                                            <span class="scheduleFilm__btnRed">C13</span>Thanh gươm diệt
+                                                            quỷ:
+                                                            Chuyến tàu vô tận - Demon Slayer The Movie: Mugen Train
+                                                        </span>
+                                                        <p class="film__time">117 phút - TIX 8.4 - IMDb 0</p>
+                                                    </a>
+                                                </div>
+                                                <div class="film__detailsBottom">
+                                                    <p class="film__detailsBottom__eleP mb-0">2D Digital</p>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">14:30</span> ~ 16:27
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">15:35</span> ~ 17:32
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">16:45</span> ~ 18:42
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">17:50</span> ~ 19:47
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">19:00</span> ~ 20:57
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">20:00</span> ~ 21:57
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">21:05</span> ~ 23:02
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">22:15</span> ~ 00:12
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">23:10</span> ~ 01:07
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--END Làm danh sách các ngày chiếu -->
+
+                            <!-- <div class="tab-content" id="v-pills-tabContent">
+                                <div class="tab-pane fade show active" id="v-pills-bhd" role="tabpanel"
+                                    aria-labelledby="v-pills-bhd-tab" style="display: none;">
+                                    <div class="row">
+                                        <div class="col-sm-12 movieSchedule2__film">
+                                            <div class="film__item">
+                                                <div class="film__detailsTop d-flex">
+                                                    <a class="imgFilm mr-3" href="#">
+                                                        <img src="./img/chong-nguoi-ta-c18-16027366912559_60x60.png"
+                                                            alt="">
+                                                    </a>
+                                                    <a class="infoFilm" href="#">
+                                                        <span class="film__name">
+                                                            <span class="scheduleFilm__btnRed">C18</span>Chồng người ta
+                                                        </span>
+                                                        <p class="film__time">90 phút - TIX 6.5 - IMDb 0</p>
+                                                    </a>
+                                                </div>
+                                                <div class="film__detailsBottom">
+                                                    <p class="film__detailsBottom__eleP mb-0">2D Digital</p>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">23:15</span> ~ 00:45
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <div class="film__item">
+                                                <div class="film__detailsTop d-flex">
+                                                    <a class="imgFilm mr-3" href="#">
+                                                        <img src="./img/gia-dinh-croods-ky-nguyen-moi-the-croods-new-age-p-16057775991222_60x60.png"
+                                                            alt="">
+                                                    </a>
+                                                    <a class="infoFilm" href="#">
+                                                        <span class="film__name">
+                                                            <span class="scheduleFilm__btnGreen">P</span>Gia đình
+                                                            Croods: Kỷ
+                                                            nguyên mới - The Croods: New Age
+                                                        </span>
+                                                        <p class="film__time">95 phút - TIX 8.9 - IMDb 0</p>
+                                                    </a>
+                                                </div>
+                                                <div class="film__detailsBottom">
+                                                    <p class="film__detailsBottom__eleP mb-0">2D Digital</p>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">15:05</span> ~ 16:40
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">21:00</span> ~ 22:35
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <div class="film__item">
+                                                <div class="film__detailsTop d-flex">
+                                                    <a class="imgFilm mr-3" href="#">
+                                                        <img src="./img/thanh-guom-diet-quy-chuyen-tau-vo-tan_60x60.png"
+                                                            alt="">
+                                                    </a>
+                                                    <a class="infoFilm" href="#">
+                                                        <span class="film__name">
+                                                            <span class="scheduleFilm__btnRed">C13</span>Thanh gươm diệt
+                                                            quỷ:
+                                                            Chuyến tàu vô tận - Demon Slayer The Movie: Mugen Train
+                                                        </span>
+                                                        <p class="film__time">117 phút - TIX 8.4 - IMDb 0</p>
+                                                    </a>
+                                                </div>
+                                                <div class="film__detailsBottom">
+                                                    <p class="film__detailsBottom__eleP mb-0">2D Digital</p>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">14:30</span> ~ 16:27
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">15:35</span> ~ 17:32
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">16:45</span> ~ 18:42
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">17:50</span> ~ 19:47
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">19:00</span> ~ 20:57
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">20:00</span> ~ 21:57
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">21:05</span> ~ 23:02
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">22:15</span> ~ 00:12
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">23:10</span> ~ 01:07
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <div class="film__item">
+                                                <div class="film__detailsTop d-flex">
+                                                    <a class="imgFilm mr-3" href="#">
+                                                        <img src="./img/thanh-guom-diet-quy-chuyen-tau-vo-tan_60x60.png"
+                                                            alt="">
+                                                    </a>
+                                                    <a class="infoFilm" href="#">
+                                                        <span class="film__name">
+                                                            <span class="scheduleFilm__btnRed">C13</span>Thanh gươm diệt
+                                                            quỷ:
+                                                            Chuyến tàu vô tận - Demon Slayer The Movie: Mugen Train
+                                                        </span>
+                                                        <p class="film__time">117 phút - TIX 8.4 - IMDb 0</p>
+                                                    </a>
+                                                </div>
+                                                <div class="film__detailsBottom">
+                                                    <p class="film__detailsBottom__eleP mb-0">2D Digital</p>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">14:30</span> ~ 16:27
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">15:35</span> ~ 17:32
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">16:45</span> ~ 18:42
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">17:50</span> ~ 19:47
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">19:00</span> ~ 20:57
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">20:00</span> ~ 21:57
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">21:05</span> ~ 23:02
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">22:15</span> ~ 00:12
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">23:10</span> ~ 01:07
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="v-pills-cinestar" role="tabpanel"
+                                    aria-labelledby="v-pills-cinestar-tab">
+                                    <div class="row">
+                                        <div class="col-sm-12 movieSchedule2__film">
+                                            <div class="film__item">
+                                                <div class="film__detailsTop d-flex">
+                                                    <a class="imgFilm mr-3" href="#">
+                                                        <img src="./img/chong-nguoi-ta-c18-16027366912559_60x60.png"
+                                                            alt="">
+                                                    </a>
+                                                    <a class="infoFilm" href="#">
+                                                        <span class="film__name">
+                                                            <span class="scheduleFilm__btnRed">C18</span>Chồng người ta
+                                                        </span>
+                                                        <p class="film__time">90 phút - TIX 6.5 - IMDb 0</p>
+                                                    </a>
+                                                </div>
+                                                <div class="film__detailsBottom">
+                                                    <p class="film__detailsBottom__eleP mb-0">2D Digital</p>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">23:15</span> ~ 00:45
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <div class="film__item">
+                                                <div class="film__detailsTop d-flex">
+                                                    <a class="imgFilm mr-3" href="#">
+                                                        <img src="./img/gia-dinh-croods-ky-nguyen-moi-the-croods-new-age-p-16057775991222_60x60.png"
+                                                            alt="">
+                                                    </a>
+                                                    <a class="infoFilm" href="#">
+                                                        <span class="film__name">
+                                                            <span class="scheduleFilm__btnGreen">P</span>Gia đình
+                                                            Croods: Kỷ
+                                                            nguyên mới - The Croods: New Age
+                                                        </span>
+                                                        <p class="film__time">95 phút - TIX 8.9 - IMDb 0</p>
+                                                    </a>
+                                                </div>
+                                                <div class="film__detailsBottom">
+                                                    <p class="film__detailsBottom__eleP mb-0">2D Digital</p>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">15:05</span> ~ 16:40
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">21:00</span> ~ 22:35
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <div class="film__item">
+                                                <div class="film__detailsTop d-flex">
+                                                    <a class="imgFilm mr-3" href="#">
+                                                        <img src="./img/thanh-guom-diet-quy-chuyen-tau-vo-tan_60x60.png"
+                                                            alt="">
+                                                    </a>
+                                                    <a class="infoFilm" href="#">
+                                                        <span class="film__name">
+                                                            <span class="scheduleFilm__btnRed">C13</span>Thanh gươm diệt
+                                                            quỷ:
+                                                            Chuyến tàu vô tận - Demon Slayer The Movie: Mugen Train
+                                                        </span>
+                                                        <p class="film__time">117 phút - TIX 8.4 - IMDb 0</p>
+                                                    </a>
+                                                </div>
+                                                <div class="film__detailsBottom">
+                                                    <p class="film__detailsBottom__eleP mb-0">2D Digital</p>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">14:30</span> ~ 16:27
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">15:35</span> ~ 17:32
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">16:45</span> ~ 18:42
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">17:50</span> ~ 19:47
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">19:00</span> ~ 20:57
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">20:00</span> ~ 21:57
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">21:05</span> ~ 23:02
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">22:15</span> ~ 00:12
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">23:10</span> ~ 01:07
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <div class="film__item">
+                                                <div class="film__detailsTop d-flex">
+                                                    <a class="imgFilm mr-3" href="#">
+                                                        <img src="./img/thanh-guom-diet-quy-chuyen-tau-vo-tan_60x60.png"
+                                                            alt="">
+                                                    </a>
+                                                    <a class="infoFilm" href="#">
+                                                        <span class="film__name">
+                                                            <span class="scheduleFilm__btnRed">C13</span>Thanh gươm diệt
+                                                            quỷ:
+                                                            Chuyến tàu vô tận - Demon Slayer The Movie: Mugen Train
+                                                        </span>
+                                                        <p class="film__time">117 phút - TIX 8.4 - IMDb 0</p>
+                                                    </a>
+                                                </div>
+                                                <div class="film__detailsBottom">
+                                                    <p class="film__detailsBottom__eleP mb-0">2D Digital</p>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">14:30</span> ~ 16:27
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">15:35</span> ~ 17:32
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">16:45</span> ~ 18:42
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">17:50</span> ~ 19:47
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">19:00</span> ~ 20:57
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">20:00</span> ~ 21:57
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">21:05</span> ~ 23:02
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">22:15</span> ~ 00:12
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">23:10</span> ~ 01:07
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="v-pills-dongda" role="tabpanel"
+                                    aria-labelledby="v-pills-dongda-tab">
+                                    <div class="row">
+                                        <div class="col-sm-12 movieSchedule2__film">
+                                            <div class="film__item">
+                                                <div class="film__detailsTop d-flex">
+                                                    <a class="imgFilm mr-3" href="#">
+                                                        <img src="./img/chong-nguoi-ta-c18-16027366912559_60x60.png"
+                                                            alt="">
+                                                    </a>
+                                                    <a class="infoFilm" href="#">
+                                                        <span class="film__name">
+                                                            <span class="scheduleFilm__btnRed">C18</span>Chồng người ta
+                                                        </span>
+                                                        <p class="film__time">90 phút - TIX 6.5 - IMDb 0</p>
+                                                    </a>
+                                                </div>
+                                                <div class="film__detailsBottom">
+                                                    <p class="film__detailsBottom__eleP mb-0">2D Digital</p>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">23:15</span> ~ 00:45
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <div class="film__item">
+                                                <div class="film__detailsTop d-flex">
+                                                    <a class="imgFilm mr-3" href="#">
+                                                        <img src="./img/gia-dinh-croods-ky-nguyen-moi-the-croods-new-age-p-16057775991222_60x60.png"
+                                                            alt="">
+                                                    </a>
+                                                    <a class="infoFilm" href="#">
+                                                        <span class="film__name">
+                                                            <span class="scheduleFilm__btnGreen">P</span>Gia đình
+                                                            Croods: Kỷ
+                                                            nguyên mới - The Croods: New Age
+                                                        </span>
+                                                        <p class="film__time">95 phút - TIX 8.9 - IMDb 0</p>
+                                                    </a>
+                                                </div>
+                                                <div class="film__detailsBottom">
+                                                    <p class="film__detailsBottom__eleP mb-0">2D Digital</p>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">15:05</span> ~ 16:40
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">21:00</span> ~ 22:35
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <div class="film__item">
+                                                <div class="film__detailsTop d-flex">
+                                                    <a class="imgFilm mr-3" href="#">
+                                                        <img src="./img/thanh-guom-diet-quy-chuyen-tau-vo-tan_60x60.png"
+                                                            alt="">
+                                                    </a>
+                                                    <a class="infoFilm" href="#">
+                                                        <span class="film__name">
+                                                            <span class="scheduleFilm__btnRed">C13</span>Thanh gươm diệt
+                                                            quỷ:
+                                                            Chuyến tàu vô tận - Demon Slayer The Movie: Mugen Train
+                                                        </span>
+                                                        <p class="film__time">117 phút - TIX 8.4 - IMDb 0</p>
+                                                    </a>
+                                                </div>
+                                                <div class="film__detailsBottom">
+                                                    <p class="film__detailsBottom__eleP mb-0">2D Digital</p>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">14:30</span> ~ 16:27
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">15:35</span> ~ 17:32
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">16:45</span> ~ 18:42
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">17:50</span> ~ 19:47
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">19:00</span> ~ 20:57
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">20:00</span> ~ 21:57
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">21:05</span> ~ 23:02
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">22:15</span> ~ 00:12
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">23:10</span> ~ 01:07
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <div class="film__item">
+                                                <div class="film__detailsTop d-flex">
+                                                    <a class="imgFilm mr-3" href="#">
+                                                        <img src="./img/thanh-guom-diet-quy-chuyen-tau-vo-tan_60x60.png"
+                                                            alt="">
+                                                    </a>
+                                                    <a class="infoFilm" href="#">
+                                                        <span class="film__name">
+                                                            <span class="scheduleFilm__btnRed">C13</span>Thanh gươm diệt
+                                                            quỷ:
+                                                            Chuyến tàu vô tận - Demon Slayer The Movie: Mugen Train
+                                                        </span>
+                                                        <p class="film__time">117 phút - TIX 8.4 - IMDb 0</p>
+                                                    </a>
+                                                </div>
+                                                <div class="film__detailsBottom">
+                                                    <p class="film__detailsBottom__eleP mb-0">2D Digital</p>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">14:30</span> ~ 16:27
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">15:35</span> ~ 17:32
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">16:45</span> ~ 18:42
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">17:50</span> ~ 19:47
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">19:00</span> ~ 20:57
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">20:00</span> ~ 21:57
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">21:05</span> ~ 23:02
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">22:15</span> ~ 00:12
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">23:10</span> ~ 01:07
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="v-pills-megags" role="tabpanel"
+                                    aria-labelledby="v-pills-megags-tab">
+                                    <div class="row">
+                                        <div class="col-sm-12 movieSchedule2__film">
+                                            <div class="film__item">
+                                                <div class="film__detailsTop d-flex">
+                                                    <a class="imgFilm mr-3" href="#">
+                                                        <img src="./img/chong-nguoi-ta-c18-16027366912559_60x60.png"
+                                                            alt="">
+                                                    </a>
+                                                    <a class="infoFilm" href="#">
+                                                        <span class="film__name">
+                                                            <span class="scheduleFilm__btnRed">C18</span>Chồng người ta
+                                                        </span>
+                                                        <p class="film__time">90 phút - TIX 6.5 - IMDb 0</p>
+                                                    </a>
+                                                </div>
+                                                <div class="film__detailsBottom">
+                                                    <p class="film__detailsBottom__eleP mb-0">2D Digital</p>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">23:15</span> ~ 00:45
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <div class="film__item">
+                                                <div class="film__detailsTop d-flex">
+                                                    <a class="imgFilm mr-3" href="#">
+                                                        <img src="./img/gia-dinh-croods-ky-nguyen-moi-the-croods-new-age-p-16057775991222_60x60.png"
+                                                            alt="">
+                                                    </a>
+                                                    <a class="infoFilm" href="#">
+                                                        <span class="film__name">
+                                                            <span class="scheduleFilm__btnGreen">P</span>Gia đình
+                                                            Croods: Kỷ
+                                                            nguyên mới - The Croods: New Age
+                                                        </span>
+                                                        <p class="film__time">95 phút - TIX 8.9 - IMDb 0</p>
+                                                    </a>
+                                                </div>
+                                                <div class="film__detailsBottom">
+                                                    <p class="film__detailsBottom__eleP mb-0">2D Digital</p>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">15:05</span> ~ 16:40
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">21:00</span> ~ 22:35
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <div class="film__item">
+                                                <div class="film__detailsTop d-flex">
+                                                    <a class="imgFilm mr-3" href="#">
+                                                        <img src="./img/thanh-guom-diet-quy-chuyen-tau-vo-tan_60x60.png"
+                                                            alt="">
+                                                    </a>
+                                                    <a class="infoFilm" href="#">
+                                                        <span class="film__name">
+                                                            <span class="scheduleFilm__btnRed">C13</span>Thanh gươm diệt
+                                                            quỷ:
+                                                            Chuyến tàu vô tận - Demon Slayer The Movie: Mugen Train
+                                                        </span>
+                                                        <p class="film__time">117 phút - TIX 8.4 - IMDb 0</p>
+                                                    </a>
+                                                </div>
+                                                <div class="film__detailsBottom">
+                                                    <p class="film__detailsBottom__eleP mb-0">2D Digital</p>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">14:30</span> ~ 16:27
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">15:35</span> ~ 17:32
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">16:45</span> ~ 18:42
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">17:50</span> ~ 19:47
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">19:00</span> ~ 20:57
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">20:00</span> ~ 21:57
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">21:05</span> ~ 23:02
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">22:15</span> ~ 00:12
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">23:10</span> ~ 01:07
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <div class="film__item">
+                                                <div class="film__detailsTop d-flex">
+                                                    <a class="imgFilm mr-3" href="#">
+                                                        <img src="./img/thanh-guom-diet-quy-chuyen-tau-vo-tan_60x60.png"
+                                                            alt="">
+                                                    </a>
+                                                    <a class="infoFilm" href="#">
+                                                        <span class="film__name">
+                                                            <span class="scheduleFilm__btnRed">C13</span>Thanh gươm diệt
+                                                            quỷ:
+                                                            Chuyến tàu vô tận - Demon Slayer The Movie: Mugen Train
+                                                        </span>
+                                                        <p class="film__time">117 phút - TIX 8.4 - IMDb 0</p>
+                                                    </a>
+                                                </div>
+                                                <div class="film__detailsBottom">
+                                                    <p class="film__detailsBottom__eleP mb-0">2D Digital</p>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">14:30</span> ~ 16:27
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">15:35</span> ~ 17:32
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">16:45</span> ~ 18:42
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">17:50</span> ~ 19:47
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">19:00</span> ~ 20:57
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">20:00</span> ~ 21:57
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">21:05</span> ~ 23:02
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">22:15</span> ~ 00:12
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">23:10</span> ~ 01:07
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="v-pills-dcine" role="tabpanel"
+                                    aria-labelledby="v-pills-dcine-tab">
+                                    <div class="row">
+                                        <div class="col-sm-12 movieSchedule2__film">
+                                            <div class="film__item">
+                                                <div class="film__detailsTop d-flex">
+                                                    <a class="imgFilm mr-3" href="#">
+                                                        <img src="./img/chong-nguoi-ta-c18-16027366912559_60x60.png"
+                                                            alt="">
+                                                    </a>
+                                                    <a class="infoFilm" href="#">
+                                                        <span class="film__name">
+                                                            <span class="scheduleFilm__btnRed">C18</span>Chồng người ta
+                                                        </span>
+                                                        <p class="film__time">90 phút - TIX 6.5 - IMDb 0</p>
+                                                    </a>
+                                                </div>
+                                                <div class="film__detailsBottom">
+                                                    <p class="film__detailsBottom__eleP mb-0">2D Digital</p>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">23:15</span> ~ 00:45
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <div class="film__item">
+                                                <div class="film__detailsTop d-flex">
+                                                    <a class="imgFilm mr-3" href="#">
+                                                        <img src="./img/gia-dinh-croods-ky-nguyen-moi-the-croods-new-age-p-16057775991222_60x60.png"
+                                                            alt="">
+                                                    </a>
+                                                    <a class="infoFilm" href="#">
+                                                        <span class="film__name">
+                                                            <span class="scheduleFilm__btnGreen">P</span>Gia đình
+                                                            Croods: Kỷ
+                                                            nguyên mới - The Croods: New Age
+                                                        </span>
+                                                        <p class="film__time">95 phút - TIX 8.9 - IMDb 0</p>
+                                                    </a>
+                                                </div>
+                                                <div class="film__detailsBottom">
+                                                    <p class="film__detailsBottom__eleP mb-0">2D Digital</p>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">15:05</span> ~ 16:40
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">21:00</span> ~ 22:35
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <div class="film__item">
+                                                <div class="film__detailsTop d-flex">
+                                                    <a class="imgFilm mr-3" href="#">
+                                                        <img src="./img/thanh-guom-diet-quy-chuyen-tau-vo-tan_60x60.png"
+                                                            alt="">
+                                                    </a>
+                                                    <a class="infoFilm" href="#">
+                                                        <span class="film__name">
+                                                            <span class="scheduleFilm__btnRed">C13</span>Thanh gươm diệt
+                                                            quỷ:
+                                                            Chuyến tàu vô tận - Demon Slayer The Movie: Mugen Train
+                                                        </span>
+                                                        <p class="film__time">117 phút - TIX 8.4 - IMDb 0</p>
+                                                    </a>
+                                                </div>
+                                                <div class="film__detailsBottom">
+                                                    <p class="film__detailsBottom__eleP mb-0">2D Digital</p>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">14:30</span> ~ 16:27
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">15:35</span> ~ 17:32
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">16:45</span> ~ 18:42
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">17:50</span> ~ 19:47
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">19:00</span> ~ 20:57
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">20:00</span> ~ 21:57
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">21:05</span> ~ 23:02
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">22:15</span> ~ 00:12
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">23:10</span> ~ 01:07
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <div class="film__item">
+                                                <div class="film__detailsTop d-flex">
+                                                    <a class="imgFilm mr-3" href="#">
+                                                        <img src="./img/thanh-guom-diet-quy-chuyen-tau-vo-tan_60x60.png"
+                                                            alt="">
+                                                    </a>
+                                                    <a class="infoFilm" href="#">
+                                                        <span class="film__name">
+                                                            <span class="scheduleFilm__btnRed">C13</span>Thanh gươm diệt
+                                                            quỷ:
+                                                            Chuyến tàu vô tận - Demon Slayer The Movie: Mugen Train
+                                                        </span>
+                                                        <p class="film__time">117 phút - TIX 8.4 - IMDb 0</p>
+                                                    </a>
+                                                </div>
+                                                <div class="film__detailsBottom">
+                                                    <p class="film__detailsBottom__eleP mb-0">2D Digital</p>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">14:30</span> ~ 16:27
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">15:35</span> ~ 17:32
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">16:45</span> ~ 18:42
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">17:50</span> ~ 19:47
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">19:00</span> ~ 20:57
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">20:00</span> ~ 21:57
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">21:05</span> ~ 23:02
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">22:15</span> ~ 00:12
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">23:10</span> ~ 01:07
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="v-pills-lotte" role="tabpanel"
+                                    aria-labelledby="v-pills-lotte-tab">
+                                    <div class="row">
+                                        <div class="col-sm-12 movieSchedule2__film">
+                                            <div class="film__item">
+                                                <div class="film__detailsTop d-flex">
+                                                    <a class="imgFilm mr-3" href="#">
+                                                        <img src="./img/chong-nguoi-ta-c18-16027366912559_60x60.png"
+                                                            alt="">
+                                                    </a>
+                                                    <a class="infoFilm" href="#">
+                                                        <span class="film__name">
+                                                            <span class="scheduleFilm__btnRed">C18</span>Chồng người ta
+                                                        </span>
+                                                        <p class="film__time">90 phút - TIX 6.5 - IMDb 0</p>
+                                                    </a>
+                                                </div>
+                                                <div class="film__detailsBottom">
+                                                    <p class="film__detailsBottom__eleP mb-0">2D Digital</p>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">23:15</span> ~ 00:45
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <div class="film__item">
+                                                <div class="film__detailsTop d-flex">
+                                                    <a class="imgFilm mr-3" href="#">
+                                                        <img src="./img/gia-dinh-croods-ky-nguyen-moi-the-croods-new-age-p-16057775991222_60x60.png"
+                                                            alt="">
+                                                    </a>
+                                                    <a class="infoFilm" href="#">
+                                                        <span class="film__name">
+                                                            <span class="scheduleFilm__btnGreen">P</span>Gia đình
+                                                            Croods: Kỷ
+                                                            nguyên mới - The Croods: New Age
+                                                        </span>
+                                                        <p class="film__time">95 phút - TIX 8.9 - IMDb 0</p>
+                                                    </a>
+                                                </div>
+                                                <div class="film__detailsBottom">
+                                                    <p class="film__detailsBottom__eleP mb-0">2D Digital</p>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">15:05</span> ~ 16:40
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">21:00</span> ~ 22:35
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <div class="film__item">
+                                                <div class="film__detailsTop d-flex">
+                                                    <a class="imgFilm mr-3" href="#">
+                                                        <img src="./img/thanh-guom-diet-quy-chuyen-tau-vo-tan_60x60.png"
+                                                            alt="">
+                                                    </a>
+                                                    <a class="infoFilm" href="#">
+                                                        <span class="film__name">
+                                                            <span class="scheduleFilm__btnRed">C13</span>Thanh gươm diệt
+                                                            quỷ:
+                                                            Chuyến tàu vô tận - Demon Slayer The Movie: Mugen Train
+                                                        </span>
+                                                        <p class="film__time">117 phút - TIX 8.4 - IMDb 0</p>
+                                                    </a>
+                                                </div>
+                                                <div class="film__detailsBottom">
+                                                    <p class="film__detailsBottom__eleP mb-0">2D Digital</p>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">14:30</span> ~ 16:27
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">15:35</span> ~ 17:32
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">16:45</span> ~ 18:42
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">17:50</span> ~ 19:47
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">19:00</span> ~ 20:57
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">20:00</span> ~ 21:57
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">21:05</span> ~ 23:02
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">22:15</span> ~ 00:12
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">23:10</span> ~ 01:07
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                            <div class="film__item">
+                                                <div class="film__detailsTop d-flex">
+                                                    <a class="imgFilm mr-3" href="#">
+                                                        <img src="./img/thanh-guom-diet-quy-chuyen-tau-vo-tan_60x60.png"
+                                                            alt="">
+                                                    </a>
+                                                    <a class="infoFilm" href="#">
+                                                        <span class="film__name">
+                                                            <span class="scheduleFilm__btnRed">C13</span>Thanh gươm diệt
+                                                            quỷ:
+                                                            Chuyến tàu vô tận - Demon Slayer The Movie: Mugen Train
+                                                        </span>
+                                                        <p class="film__time">117 phút - TIX 8.4 - IMDb 0</p>
+                                                    </a>
+                                                </div>
+                                                <div class="film__detailsBottom">
+                                                    <p class="film__detailsBottom__eleP mb-0">2D Digital</p>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">14:30</span> ~ 16:27
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">15:35</span> ~ 17:32
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">16:45</span> ~ 18:42
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">17:50</span> ~ 19:47
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">19:00</span> ~ 20:57
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">20:00</span> ~ 21:57
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">21:05</span> ~ 23:02
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">22:15</span> ~ 00:12
+                                                    </a>
+                                                    <a href="#" class="film__detailsBottom__eleA">
+                                                        <span class="film__detailsBottom__eleSpan">23:10</span> ~ 01:07
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="thongtin" role="tabpanel" aria-labelledby="profile-tab">
+                    <div class="row detailMainStyle">
+                        <div class="col-sm-6 col-xs-12 detailLeft">
+                            <div class="row rowLeftInfo">
+                                <p class="contentTitle">Ngày công chiếu</p>
+                                <p class="contentInfo">16.04.2021</p>
+                            </div>
+                            <div class="row rowLeftInfo">
+                                <p class="contentTitle">Đạo diễn</p>
+                                <p class="contentInfo"> Lý Hải </p>
+                            </div>
+                            <div class="row rowLeftInfo">
+                                <p class="contentTitle">Diễn viên</p>
+                                <p class="contentInfo">Tiết Cương, Huỳnh Đông, Mạc Văn Khoa, Ốc Thanh Vân</p>
+                            </div>
+                            <div class="row rowLeftInfo">
+                                <p class="contentTitle">Thể Loại</p>
+                                <p class="contentInfo"></p>
+                            </div>
+                            <div class="row rowLeftInfo">
+                                <p class="contentTitle">Định dạng</p>
+                                <p class="contentInfo">2D/Digital</p>
+                            </div>
+                            <div class="row rowLeftInfo">
+                                <p class="contentTitle">Quốc Gia SX</p>
+                                <p class="contentInfo">Việt Nam</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-xs-12 detailRight">
+                            <div class="row rowLeftInfo">
+                                <p class="contentTitle">Nội dung</p>
+                            </div>
+                            <div class="row rowLeftInfo">
+                                <p class="contentInfoFull">Lật Mặt 5: 48H kể về Hiền - một cựu
+                                    vận động viên võ thuật sau khi giải nghệ vì chấn thương đã cùng vợ và con gái về quê
+                                    thăm gia đình Lâm. Họ bị cuốn vào một cuộc rượt đuổi với tay phản diện A Dìn. Để bảo
+                                    vệ cho gia đình nhỏ, Hiền phải đưa vợ con chạy trốn khắp miền Tây sông nước với sự
+                                    trợ giúp của người bạn thật thà và hài hước.
+                                </p>
+                            </div>
+                            <div class="row rowLeftInfo">
+                                <p class="contentInfoFull"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="danhgia" role="tabpanel" aria-labelledby="contact-tab">
+                    <!-- Button trigger modal -->
+                    <div class="row btnModalInpRate">
+                        <div type="button" class="btnInputYourComment" data-toggle="modal"
+                            data-target="#exampleModalCenter">
+                            <span class="imgRate"><img src="./img/avatarUser.jpg" alt="avatar"></span>
+                            <span class="inpRate">Bạn nghĩ gì về phim này</span>
+                            <span class="starRate">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row reviewers">
+                        <div class="dadCommentReviewer">
+                            <div class="row dadMainInfo">
+                                <div class="infoReviewer">
+                                    <div class="infoReviewerIcon" data-user_id="625839">
+                                        <img
+                                            src="https://s120-ava-talk.zadn.vn/6/2/2/6/39/120/3dcae854a3b08766b62b757a462dcc6e.jpg">
+                                        <!-- ngIf: comment.zalo_id && comment.zalo_id !== '' && comment.is_admin != 1 -->
+                                        <!-- <img class="ZaloFBIcon ng-scope"
+                                            ng-if="comment.zalo_id &amp;&amp; comment.zalo_id !== '' &amp;&amp; comment.is_admin != 1"
+                                            ng-src="app/assets/img/icons/zalo.svg" src="app/assets/img/icons/zalo.svg"> -->
+                                        <!-- end ngIf: comment.zalo_id && comment.zalo_id !== '' && comment.is_admin != 1 -->
+                                        <!-- ngIf: comment.facebook_id && comment.facebook_id !== '' && comment.is_admin != 1 -->
+                                    </div>
+                                    <div class="infoReviewerName">
+                                        <div class="ng-binding">Hoài Thương Hưng Thịnh Corp
+                                            <!-- ngIf: comment.is_buy_ticket == 1 -->
+                                        </div>
+                                        <p class="infoReviewerTime ng-binding">2 ngày trước</p>
+                                    </div>
+                                </div>
+                                <div class="infoStar">
+                                    <div class="core">
+                                        <p class="ng-binding">6</p>
+                                    </div>
+                                    <div id="147120" class="row star ng-binding" ng-bind-html="setStar(comment.rate)">
+                                        <img class="smallStar" src="app/assets/img/icons/star1.png"><img
+                                            class="smallStar" src="app/assets/img/icons/star1.png"><img
+                                            class="smallStar" src="app/assets/img/icons/star1.png">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row dadMainComment">
+                                <div class="more mainComment ng-binding">ơ, cái app bị sao vậy trời. mua 1 vé mà nó chỉ
+                                    hiện
+                                    đúng 1 giá 155k. chọn thử các ngày khác cũng y vậy luôn. ai mà dám mua.
+                                    <!-- ngIf: comment.content.length > 300 -->
+                                </div>
+                                <!-- ngIf: comment.list_image.length !== 0 -->
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12 count">
+                                    <div class="wrapIcon like wrapIconLike" data-type="3" data-id="147120"
+                                        ng-click="likeAction($event, comment, buildKeyCache())">
+                                        <img class="iconFacebook postLikeCmt" ng-src="app/assets/img/icons/like.png"
+                                            src="app/assets/img/icons/like.png">
+                                        <span class="amount like"><strong class="ng-binding">0</strong> Thích</span>
+                                    </div>
+                                    <!-- ngIf: comment.total_chilren_comment > 0 -->
+                                    <div class="wrapIcon wrapIconComment ng-scope" ng-click="reply(comment.comment_id)"
+                                        style="cursor: unset;" ng-if="comment.total_chilren_comment > 0">
+                                        <img class="iconFacebook" src="app/assets/img/icons/comment.png"
+                                            style="cursor: unset;">
+                                        <span class="amount"><strong class="ng-binding">1</strong> Bình luận</span>
+                                    </div><!-- end ngIf: comment.total_chilren_comment > 0 -->
+                                    <!-- <div class="wrapIcon wrapIconReply" ng-click="reply(comment.comment_id)" ng-if="!isMobile && user.is_admin">
+                                <p class="amount">Trả lời</p>
+                            </div> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="listReply">
+                            <!-- ngIf: isReply[comment.comment_id] || user.is_admin -->
+
+                            <!-- ngRepeat: childComment in listChildComment[comment.comment_id] -->
+                            <!-- ngIf: $index < showCurrentChildComment[comment.comment_id] -->
+                            <div id="child0" ng-if="$index < showCurrentChildComment[comment.comment_id]"
+                                class="dadCommentReviewer child ng-scope"
+                                ng-repeat="childComment in listChildComment[comment.comment_id]">
+                                <div class="row dadMainInfo">
+                                    <div class="infoReviewer">
+                                        <div class="infoReviewerIcon" data-user_id="447929">
+                                            <img ng-src="https://s120-ava-talk.zadn.vn/b/b/5/1/45/120/68f8dbf70e56453e51098855c8f75637.jpg"
+                                                src="https://s120-ava-talk.zadn.vn/b/b/5/1/45/120/68f8dbf70e56453e51098855c8f75637.jpg">
+                                            <!-- <img class="ZaloFBIcon" ng-if="childComment.zalo_id !== '' && childComment.is_admin != 1" ng-src="app/assets/img/icons/{{(stylemovie) ? 'zalo.svg' : 'zalo_dark.svg'}}">
+                                <img class="ZaloFBIcon" ng-if="childComment.facebook_id !== '' && childComment.is_admin != 1" ng-src="app/assets/img/icons/{{(stylemovie) ? 'facebook.svg' : 'facebook_dark.svg'}}"> -->
+                                            <!-- ngIf: childComment.zalo_id && childComment.zalo_id !== '' && childComment.is_admin != 1 --><img
+                                                class="ZaloFBIcon ng-scope"
+                                                ng-if="childComment.zalo_id &amp;&amp; childComment.zalo_id !== '' &amp;&amp; childComment.is_admin != 1"
+                                                ng-src="app/assets/img/icons/zalo.svg"
+                                                src="app/assets/img/icons/zalo.svg">
+                                            <!-- end ngIf: childComment.zalo_id && childComment.zalo_id !== '' && childComment.is_admin != 1 -->
+                                            <!-- ngIf: childComment.facebook_id && childComment.facebook_id !== '' && childComment.is_admin != 1 -->
+                                        </div>
+                                        <div class="infoReviewerName">
+                                            <div><span style="margin-right: 5px;" class="ng-binding">Bigbrother</span>
+                                                <!-- ngIf: childComment.is_buy_ticket == 1 -->
+                                            </div>
+                                            <p class="infoReviewerTime ng-binding">2 ngày trước</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row dadMainComment">
+                                    <div class="more mainComment ng-binding">Cái ápp mà bạn đánh giá phim là sao
+                                        <!-- ngIf: childComment.content.length > 300 -->
+                                    </div>
+                                    <!-- ngIf: childComment.list_image.length !== 0 && childComment.list_image -->
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12 count">
+                                        <div class="wrapIcon like wrapIconLike" data-type="3" data-id="147139"
+                                            ng-click="likeAction($event, childComment, buildKeyCache())">
+                                            <!-- <img class="iconFacebook postLikeCmt" ng-src="{{(childComment.user_like == 1 && isLoggedIn) ? 'app/assets/img/icons/like_red.png' : 'app/assets/img/icons/like.png'}}"> -->
+                                            <span class="amount like"><strong class="ng-binding">0</strong> Thích</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- end ngIf: $index < showCurrentChildComment[comment.comment_id] -->
+                            <!-- end ngRepeat: childComment in listChildComment[comment.comment_id] -->
+
+                            <!-- ngIf: (showCurrentChildComment[comment.comment_id] < comment.total_chilren_comment) -->
+                        </div>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade modalRate" id="exampleModalCenter" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <!-- <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                </div> -->
+                                <div class="modal-body">
+                                    <button type="button" class="btnClose" data-dismiss="modal">X</button>
+                                    <div class="row rowCore" id="exampleModalCenterTitle">5.0</div>
+                                    <div class="row rowStar">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <div class="row rowInp">
+                                        <input class="inputComment"
+                                            placeholder="Nói cho mọi người biết bạn nghĩ gì về phim này..."></input>
+                                    </div>
+                                    <div class="row rowPost">
+                                        <input type="file">
+                                        <button class="btnDang">ĐĂNG</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END SHOWTIME -->
+
+    <!-- Thư viện hỗ trợ JQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <!-- BS4 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+
+    <!-- VENOBOX JS -->
+    <script src="./js/venobox.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.venobox').venobox();
+        });
+    </script>
+
+    <script>
+        //khi nhấn button bên trái
+        function onClickToImage() {
+            let divShowByImage = document.getElementById("v-pills-bhd");
+            let divShowByDay = document.getElementById("nav-t3");
+            divShowByImage.style.display = "block";
+            divShowByDay.style.display = "none";
+            console.log("by image");
+            console.log(divShowByImage);
+            console.log(divShowByDay);
+
+        }
+        function onClickToT3() {
+            let divShowByImage = document.getElementById("v-pills-bhd");
+            let divShowByDay = document.getElementById("nav-t3");
+            divShowByImage.style.display = "none";
+            divShowByDay.style.display = "block";
+            console.log("by day");
+            console.log(divShowByImage);
+            console.log(divShowByDay);
+        }
+    </script>
+</body>
+
+</html>

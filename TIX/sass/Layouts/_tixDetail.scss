@@ -1,0 +1,200 @@
+
+
+
+
+
+
+
+
+.tix__detail{
+    position: relative;
+    .tix__styleBlur{
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        .posterLandscapeFilm{
+        filter: blur(15px);
+        margin: -11px 0 -5px -10px;
+        width: calc(100% + 5px);
+        }
+    }
+    .tix__styleGradient{
+        background: linear-gradient(to top, rgb(10, 32, 41), transparent 100%);
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+    }
+    .tix__content{
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        left: 50%;
+        transform: translate3d(-50%,-50%,0);
+        width: 70%;
+        margin: auto;
+        max-width: 870px;
+        .showListFilm1__item {
+           
+            .show__img {
+                width: 218px;
+                height: 322px;
+                position: relative;
+                max-width: 220px;
+                img {
+                    display: block;
+                    width: 100%;
+                    height: auto;
+                    border-radius: 5px;
+                }
+                .showListFilm1__overlayIcon {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    // background: linear-gradient(to top, $color-black-0, transparent 100%);
+                    border-radius: 5px;
+                    opacity: 0;
+                    overflow: hidden;
+                    flex-flow: 0;
+                    transition: all 0.5s;
+                    .myVenobox {
+                        display: block;
+                        width: 70px;
+                        height: 70px;
+                        border-radius: 50%;
+                        border: 2px solid $color-white-0;
+                        line-height: 70px;
+                        text-align: center;
+                        color: $color-white-0;
+
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+                &:hover {
+                     .showListFilm1__overlayIcon {
+                        opacity: 1;
+                    }
+                }
+           
+        
+            }
+           
+        }
+        .show_detail{
+            float: none;
+            clear: both;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 27%;
+            color: #e9e9e9;
+                .show__name{
+                    font-size: 24px;
+                }
+                .btnMuaVe{
+                    font-size: 16px;
+                    border-radius: 4px;
+                    text-align: center;
+                    background: 0 0;
+                    padding: 7px 25px;
+                    transition: all .2s;
+                    margin-top: 25px;
+                    margin-bottom: 20px;
+                    background-color: #fb4226;
+                    border: none;
+                    color: #fff;
+                    &:hover{
+                        background-color: #b42a14;
+                    }
+                }
+            }
+        .circleStar{
+            text-align: center;
+            padding: 0;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+           .c100{
+            position: relative;
+            font-size: 126px;
+            width: 1em;
+            height: 1em;
+            border-radius: 50%;
+            margin: auto;
+            background-color: rgba(0,0,0,.4);
+            // .circleBorder{
+            //     width: 111px;
+            //     height: 111px;
+            //     background: 0 0;
+            //     border: 7.5px solid #3a3a3a;
+            //     border-radius: 50%;
+            //     -moz-border-radius: 50%;
+            //     -webkit-border-radius: 50%;
+            //     position: absolute;
+            // }
+            span{
+                position: absolute;
+                width: 100%;
+                z-index: 1;
+                left: 0;
+                top: 0;
+                line-height: 2.4em;
+                font-size: .42em;
+                color: #fff;
+                display: block;
+                text-align: center;
+                white-space: nowrap;
+                -webkit-transition-property: all;
+                -moz-transition-property: all;
+                -o-transition-property: all;
+                transition-property: all;
+                -webkit-transition-duration: .2s;
+                -moz-transition-duration: .2s;
+                -o-transition-duration: .2s;
+                transition-duration: .2s;
+                -webkit-transition-timing-function: ease-out;
+                -moz-transition-timing-function: ease-out;
+                -o-transition-timing-function: ease-out;
+                transition-timing-function: ease-out;
+            }
+            .slice{
+                clip: rect(auto,auto,auto,auto);
+                .bar{
+                    position: absolute;
+                    border: .06em solid #7ed321;
+                    width: 126px;
+                    height: 126px;
+                    clip: rect(0,.5em,1em,0);
+                    border-radius: 50%;
+                }
+                .fill{
+                    transform: rotate(180deg);
+                    // position: absolute;
+                    // border: .06em solid #7ed321;
+                    // width: .88em;
+                    // height: .88em;
+                    // clip: rect(0,.5em,1em,0);
+                    // border-radius: 50%;
+                }
+            }
+           }
+           .rate{
+               color: #fb4226;
+               font-size: 20px;
+           }
+           .rate__numOfPeople{
+            color: #e9e9e9;
+        }
+        }
+
+    }
+}

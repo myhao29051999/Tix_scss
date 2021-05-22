@@ -1,0 +1,30 @@
+//Helper
+@import './Helper/variables';
+@import './Helper/mixin';
+
+//Vendor
+
+//Base
+@import './Base/reset';
+@import './Base/nomalized';
+
+//Component
+@import './Components/button';
+@import './Components/spanCinema';
+//Layout
+@import './Layouts/header';
+@import './Layouts/carousel';
+@import './Layouts/movieSchedule1';
+@import './Layouts/movieSchedule2';
+
+@import './Layouts/film24h';
+@import './Layouts/application';
+@import './Layouts/partner';
+@import './Layouts/footer';
+
+
+@import './Layouts/tixDetail';
+@import './Layouts/detailShowtime';
+//Pages
+
+//Theme

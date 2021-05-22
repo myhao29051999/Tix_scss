@@ -1,0 +1,122 @@
+footer {
+    .footer_page {
+        background-color: #222;
+        color: #949494;
+        .mainMaxWidth {
+            max-width: 940px;
+            margin: auto;
+            .row {
+                margin-left: 0;
+                margin-right: 0;
+            }
+            .imgFooter {
+                text-align: center;
+                padding: 0;
+                .zionImg {
+                    width: 80px;
+                    height: auto;
+                    border-radius: 8px;
+                }
+                .imgCongThuong {
+                    width: 130px;
+                    float: right;
+                }
+            }
+            .infoFooter {
+                color: #fff;
+                white-space: nowrap;
+                font-size: 70%;
+                span:first-child {
+                    color: #fff;
+                }
+                span {
+                    display: block;
+                    line-height: 1.8;
+                    color: #949494;
+                    font-size: 12px;
+                    font-weight: 400;
+                }
+                .textFooter {
+                    color: $color-red-0;
+                }
+                .textFooter:hover {
+                    text-decoration: none;
+                    cursor: pointer;
+                    // color: #fb4226;
+                }
+            }
+        }
+    }
+}
+footer {
+    @include responsive("large") {
+        .footer_page {
+            .mainMaxWidth {
+                .infoFooter {
+                    text-align: center;
+                }
+            }
+        }
+    }
+    @include responsive("medium") {
+        .footer_page {
+            .mainMaxWidth {
+                .infoFooter {
+                    text-align: center;
+                }
+            }
+        }
+    }
+    @include responsive("small-767") {
+        .footer_page {
+            .mainMaxWidth {
+                .row {
+                    // display: block;
+                    .imgFooter {
+                        margin-left: 290px;
+                        .zionImg {
+                            display: block;
+                            margin-left: 25px;
+                        }
+                        .imgCongThuong {
+                            display: block;
+                            margin: auto;
+                            float: none;
+                        }
+                    }
+                    .infoFooter {
+                        margin-left: 70px;
+                        padding: 5px;
+                        white-space: initial;
+                    }
+                }
+            }
+        }
+    }
+    @include responsive("small") {
+        .footer_page {
+            .mainMaxWidth {
+                .row {
+                    display: block;
+                    .imgFooter {
+                        margin-left: 230px;
+                        .zionImg {
+                            display: block;
+                            margin-left: 25px;
+                        }
+                        .imgCongThuong {
+                            display: block;
+                            margin: auto;
+                            float: none;
+                        }
+                    }
+                    .infoFooter {
+                        margin-left: 80px;
+                        padding: 5px;
+                        white-space: initial;
+                    }
+                }
+            }
+        }
+    }
+}

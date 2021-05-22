@@ -1,0 +1,434 @@
+.detail__showtime{
+    background-color: rgb(10, 32, 41);
+    // margin-top: -50px;
+    width: 100%;
+
+    .movieSchedule2__content{
+        // // top: 50%;
+        // width: 100%;
+        // left: 50%;
+        // transform: translate3d(-50%,-50%,0);
+        // width: 70%;
+        // margin: auto;
+       
+        max-width: 870px;
+        .nav{
+            border: none;
+            .nav-item{
+                .nav-link{
+                    border: none;
+                    font-size: 20px;
+                    // background: white;
+                    color: white;
+                    transform: scale(1);
+                    transition: all 0.5s;
+                    &:hover {
+                        transform: scale(1.2);
+                        margin-left: 15px;
+                        margin-right: 15px;
+                        border: none;
+                    }
+                    &:focus{
+                        border: none;
+                    }
+                }
+                .nav-link.active{
+                    color: $color-red-0;
+                    // background-color: transparent;
+                    background: none;
+                    transform: scale(1);
+                    border: none;
+                }
+            }
+        }
+        .showInfoDetail{
+            max-width: 870px;
+            justify-content: center;
+            // position: relative;
+            // left: 50%;
+            // transform: translateX(-50%);
+            #lichchieu{
+                background: $color-white-0;
+                margin-top: 40px;
+                .movieSchedule2__listImgCinema {
+                    min-height: 705px;
+                    width: 92px;
+                    // border: 1px solid #ebebec;
+                    // border-top-left-radius: 4px;
+                    // border-bottom-left-radius: 4px;
+                    .nav-pills {
+                        text-align: center;
+                        .nav-link.active{
+                            opacity: 1;
+                        }
+                        .nav-link {
+                            background-color: $color-white-0;
+                            opacity: .5;
+                            padding: 20px;
+                            transition: all .2s;
+                            border-bottom: 1px solid #ebebec;
+                            img {
+                                width: 50px;
+                            }
+                            &:hover{
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+                .movieSchedule2__listCinemaAndFilm { 
+                    .nav-tabs{
+                        border: none;
+                        width: auto;
+                        display: block;
+                        overflow-x: scroll;
+                        overflow-y: hidden;
+                        white-space: nowrap;
+                        .nav-link{
+                            color:$color-black-0;
+                            display: inline-block;
+                            text-align: center;
+                            padding: 14px;
+                            text-decoration: none;
+                            &:hover{
+                                border: none;
+                                border: transparent;
+                                
+                            }
+                        }
+                        .nav-link.active{
+                            background: none;
+                            border: none;
+                            color:$color-red-0;
+                        }
+                        &::-webkit-scrollbar{
+                            height: 5px;
+                            background-color: #F5F5F5;
+                        }
+                        &::-webkit-scrollbar-thumb {
+                            border-radius: 10px;
+                            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+                            background-color: #CCCCCC;
+                        }
+                    }
+                  
+                    .movieSchedule2__film {
+                        max-height: 705px;
+                        width: calc(100% - 30% - 92px);
+                        // border: 1px solid #ebebec;
+                        // border-top-right-radius: 4px;
+                        // border-bottom-right-radius: 4px;
+                        position: relative;
+                        overflow-y: scroll;
+                        overflow-x: hidden;
+                        margin: 0 -16px;
+                        .film__item {
+                            padding-bottom: 17px;
+                            padding-top: 20px;
+                            padding-right: 15px;
+                            padding-left: 20px;
+                            width: 100%;
+                            position: relative;
+                            margin-bottom: 0;
+                            border: none;
+                            box-shadow: none;
+                            -webkit-box-shadow: none;
+                            .film__detailsTop {
+                                .imgFilm {
+                                    img {
+                                        width: 50px;
+                                    }
+                                }
+                                .infoFilm {
+                                    text-decoration: none;
+                                    .film__name {
+                                        @include styleText($color-black-0, $fs-0, $fw-bold);
+                                    }
+                                    .film__time {
+                                        @include styleText($color-gray-2, $fs-5, $fw-normal);
+                                        margin: 0;
+                                    }
+                                }
+                            }
+                            .film__detailsBottom {
+                                .film__detailsBottom__eleP {
+                                    margin-top: 15px;
+                                    margin-bottom: 5px;
+                                    @include styleText($color-black-0, $fs-4, $fw-bold);
+                                }
+                                .film__detailsBottom__eleA {
+                                    @include styleText($color-gray-2, $fs-5, $fw-normal);
+                                    border: 1px solid #e4e4e4;
+                                    padding: 5px 15px;
+                                    transition: all 0.2s;
+                                    text-decoration: none;
+                                    text-align: center;
+                                    background-color: rgba(246, 246, 246, 0.5);
+                                    border-radius: 7px;
+                                    display: inline-block;
+                                    margin-top: 5px;
+                                    .film__detailsBottom__eleSpan {
+                                        @include styleText($color-green-2, $fs-2, $fw-bold-2);
+                                        &:hover {
+                                            color: $color-red-0;
+                                        }
+                                    }
+                                }
+                            }
+                            // &:after{
+                            //     content: '';
+                            //     position: absolute;
+                            //     bottom: 0;
+                            //     left: 50%;
+                            //     width: calc(100% - 40px);
+                            //     transform: translateX(-50%);
+                            //     border-bottom: 1px solid #fff;
+                            //     border-color: rgba(238,238,238,.88);
+                            // }
+                        }
+                        &::-webkit-scrollbar{
+                            width: 5px;
+                            background-color: #F5F5F5;
+                        }
+                        &::-webkit-scrollbar-thumb {
+                            border-radius: 10px;
+                            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+                            background-color: #CCCCCC;
+                        }
+                    }
+                }
+            }
+            #thongtin{
+                // color: #fff;
+                // font-size: 14px;
+                // .infoFilm__left{
+                //     padding: 0 7px;
+                //     .rowLeftInfo{
+                //         margin-bottom: 10px;
+                //         .contentTitle{
+                //             width: 35%;
+                //             float: left;
+                            
+                //         }
+                //         .contentInfo{
+                //             float: left;
+                //             width: 40%;
+                //         }
+                //     }
+                // }
+               .detailMainStyle{
+                   margin-top: 40px;
+                   .detailLeft{
+                       .rowLeftInfo{
+                            margin-bottom: 10px;
+                            .contentTitle{
+                                width: 35%;
+                                float: left;
+                                font-size: 14px;
+                                color: #fff;
+                            }
+                            .contentInfo {
+                                color: #e9e9e9;
+                                width: 40%;
+                                float: left;
+                                font-size: 14px;
+                            }
+                       }
+                   }
+                   .detailRight{
+                       padding-left: 10px;
+                       .rowLeftInfo{
+                            margin-bottom: 10px;
+                            .contentTitle{
+                                color: #fff;
+                                width: 35%;
+                                float: left;
+                                font-size: 14px;
+                            }
+                            .contentInfoFull{
+                                text-align: justify;
+                                width: 100%;
+                                float: left;
+                                font-size: 14px;
+                                color: #e9e9e9;
+                            }
+                       }
+                   }
+               }
+            }
+            #danhgia{
+                .btnModalInpRate{
+                    max-width: 580px;
+                    margin: 15px calc(50% - 290px) 0;
+                    .btnInputYourComment{
+                        width: 100%;
+                        background: #fff;
+                        border-radius: 4px;
+                        padding: 10px 10px;
+                        position: relative;
+                        height: 40px;
+                       .imgRate{
+                            position: absolute;
+                            top: 6%;
+                            left: 3%;
+                            img{
+                                width: 36px;
+                                height: 36px;
+                                border-radius: 50%;  
+                            }
+                       }
+                       .inpRate{
+                            color: #9b9b9b;
+                            font-size: 14px;
+                            position: absolute;
+                            left: 11%;
+                       }
+                       .starRate{
+                            position: absolute;
+                            left: 82%;
+                       }
+                    }
+                }
+                .reviewers{
+                    border: 1px solid #e6e6e6;
+                    border-bottom: none;
+                    border-radius: 3px;
+                    margin: 15px calc(50% - 290px) 0;
+                    background-color: #fff;
+                    max-width: 580px;
+                    .dadCommentReviewer{
+                        position: relative;
+                        float: left;
+                        width: 100%;
+                        padding: 20px 20px 12px;
+                        border-bottom: 1px solid #e6e6e6;
+                        .dadMainInfo{
+                            margin: 0;
+                            margin-bottom: 10px;
+                            justify-content: space-between;
+                            .infoReviewer{
+                                float: left;
+                                text-decoration: none;
+                                display: inline-block;
+                                width: 50%;
+                                .infoReviewerIcon{
+                                    float: left;
+                                    img{
+                                        height: 32px;
+                                        width: 32px;
+                                        border-radius: 25px;
+                                    }
+                                }
+                                .infoReviewerName{
+                                    margin-left: 10px;
+                                    color: #000;
+                                    .infoReviewerTime {
+                                        font-size: 10px;
+                                        color: #9b9b9b;
+                                        line-height: 1;
+                                    }
+                                }
+                            }
+                            .infoStar{
+                                display: inline-block;
+                                float: right;
+                                width: 50%;
+                                .core{
+                                    color: #91d25a;
+                                    font-size: 16px;
+                                    margin: auto;
+                                    p{
+                                        text-align: center;
+                                        margin-bottom: 0;
+                                    }
+                                }
+                                .star{
+                                   
+                                }
+                            }
+                        }
+                        .dadMainComment{
+                            position: relative;
+                            .mainComment {
+                                padding: 20px 0;
+                                font-size: 14px;
+                                color: #4a4a4a;
+                                letter-spacing: -.2px; 
+                                border-radius: 4px;
+                                overflow-x: hidden;
+                            }
+                        }
+                    }
+                    .listReply{
+                        width: 100%;
+                        float: left;
+                        background-color: #f7fcff;
+                    }
+                }
+                .modalRate{
+                    .modal-body{
+                        .btnClose{
+                            position: absolute;
+                            right: 3%;
+                            top: 0;
+                            background: none;
+                            font-size: 20px;
+                            color: rgb(169, 163, 163);
+                            border: none;
+                        }
+                        .rowCore{
+                            font-size: 40px;
+                            color: #7ed321;
+                            // font-family: 'SF Medium';
+                            justify-content: center;
+                            // clear: both;
+                            // margin-top: 10px;
+                            // margin-bottom: -15px;
+                        }
+                        .rowStar{
+                            font-size: 40px;
+                            color: red;
+                            justify-content: center;
+                        }
+                        .rowInp{
+                            .inputComment{
+                                padding: 20px;
+                                margin: 20px;
+                                border-radius: 4px;
+                                width: 740px;
+                                border: 1px solid #e8e8e9;
+                                background: #fff;
+                                resize: none;
+                                font-size: 16px;
+                                &:focus{
+                                    outline-width: 0;
+                                    border-color: #fb4226!important;
+                                    box-shadow: 0 14px 28px rgba(247, 156, 194, 0.25), 0 3px 3px rgba(245, 87, 179, 0.22);
+                                    }
+                                }
+                            }
+                        .rowPost{
+                            margin-left: 6px;
+                           .btnDang{
+                                position: absolute;
+                                right: 3%;
+                                background-color: #fb4226;
+                                border-color: #fb4226;
+                                color: #fff;
+                                background-image: linear-gradient(-226deg
+                                ,#fb4226 11%,#be2912 100%);
+                                padding: 6px 20px;
+                                border-radius: 3px;
+                            
+
+                           }
+                        }    
+                        }
+                    }
+                    .modal-footer{
+                        border-top: none;
+                    }
+                }
+            }
+        }
+    }

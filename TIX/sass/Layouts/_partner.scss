@@ -1,0 +1,193 @@
+.partner {
+    .partner_company {
+        background-color: #222;
+        padding-top: $pd-0;
+        padding-bottom: $pd-0;
+        color: #949494;
+        .mainMaxWidth {
+            max-width: 940px;
+            margin: auto;
+            .row {
+                margin-left: 0;
+                margin-right: 0;
+                .title {
+                    color: #fff;
+                    font-size: $fs-5;
+                }
+                .div2 {
+                    padding-left: 0;
+                    display: flex;
+                }
+
+                .noPaddingLeft {
+                    padding-left: 0;
+                }
+                .fontSizeP {
+                    a {
+                        font-size: $fs-5;
+                        font-weight: $fw-bold-1;
+                        white-space: nowrap;
+                        color: #949494;
+                        transition: all 0.5s;
+                        line-height: 2.3;
+                    }
+                    a:hover{
+                        text-decoration: none;
+                        color: white;
+                    }
+                }
+            }
+            .hrPartner {
+                border-top: 1px solid $color-gray-1;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+        }
+
+        .linePartner {
+            margin-bottom: 15px;
+            padding-left: 0;
+            padding-right: 0;
+        }
+        .iconConnect {
+            border-radius: 50%;
+            height: 30px;
+            width: 30px;
+            margin-right: 15px;
+        }
+        .iconConnect:hover{
+            opacity: 0.7;
+        }
+        .icon1 {
+            background-color: $color-white-0;
+        }
+        .div_flex {
+            display: -webkit-box;
+            .textCenter {
+                text-align: center;
+            }
+            .col-xs-6 {
+                width: 50%;
+            }
+        }
+        .iconApp {
+            background: 0 0;
+            height: 30px;
+            width: auto;
+            margin: $mg-1;
+        }
+    }
+}
+
+
+.partner {
+    @include responsive("large") {
+        .partner_company {
+            .hidden {
+                display: none;
+            }
+            .noHidden {
+                padding: 0 10px;
+                display: -webkit-inline-box;
+                width: 100%;
+                text-align: center;
+                .textChinhSach {
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+    @include responsive("medium-868") {
+        .partner_company {
+            .hidden {
+                display: none;
+            }
+            .noHidden {
+                display: block;
+                width: 100%;
+                text-align: center;
+                margin-left: 50px;
+                .textChinhSach {
+                    margin-left: 0px;
+                }
+            }
+            .textCenter {
+                .img_logo {
+                    text-align: center;
+                    margin-left: 60px;
+                    display: flex;
+                }
+            }
+        }
+    }
+    @include responsive("medium") {
+        .partner_company {
+            .hidden {
+                display: none;
+            }
+            .noHidden {
+                display: block;
+                width: 100%;
+                text-align: center;
+                margin-left: 50px;
+                .textChinhSach {
+                    margin-left: 0px;
+                }
+            }
+            .textCenter {
+                .img_logo {
+                    text-align: center;
+                    margin-left: 60px;
+                    display: flex;
+                }
+            }
+        }
+    }
+
+    @include responsive("small-767") {
+        .partner_company {
+            .hidden {
+                display: none;
+            }
+            .noHidden {
+                display: flex;
+                width: 100%;
+              
+                margin-left: 215px;
+                .textChinhSach {
+                    margin-left: 10px;
+                }
+            }
+            .textCenter {
+                .img_logo {
+                    padding: 20px 0;
+                    margin-left: 40px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    @include responsive("small") {
+        .partner_company {
+            .hidden {
+                display: none;
+            }
+            .noHidden {
+                display: flex;
+                width: 100%;
+                margin-left: 150px;
+                .textChinhSach {
+                    margin-left: 10px;
+                }
+            }
+            .textCenter {
+                .img_logo {
+                    padding: 20px 0;
+                    margin-left: 40px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+

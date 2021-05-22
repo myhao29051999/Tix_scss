@@ -1,0 +1,61 @@
+//Chỉnh sửa mũi tên phần carousel
+.owl-prev,
+.owl-next {
+    position: absolute;
+    top: 35%;
+    left: 1%;
+    // width: 43px;
+    // height: 43px;
+    span {
+        @include styleText($color-gray-0, 70px, $fw-normal);
+        opacity: 0.5;
+        border: none;
+    }
+    &:focus {
+        outline: none;
+        border: none;
+    }
+}
+.owl-next {
+    left: unset;
+    right: 1%;
+}
+
+.dropup {
+    .btn {
+        border: 1px solid $color-black-0;
+        &:focus {
+            outline: 0;
+            box-shadow: none;
+        }
+        &:hover {
+            color: $color-black-0;
+        }
+    }
+}
+.owl-dots {
+    position: absolute;
+    bottom: 22%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+// .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+//     /* background: #869791; */
+//     background: red;
+// }
+.owl-theme {
+    .owl-dots {
+        .owl-dot.active {
+            span {
+                background: $color-red-0;
+                border: none;
+            }
+        }
+    }
+}
+//MovieSchedule1
+.movieSchedule1 {
+    .dropdown-toggle::after {
+        margin-left: 90px;
+    }
+}

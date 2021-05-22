@@ -1,0 +1,181 @@
+.movieSchedule2 {
+    .movieSchedule2__content {
+        width: 65%;
+        margin: auto;
+        .movieSchedule2__backgroundImg{
+            background-image: url(../img/back-news.png);
+            background-position-x: initial;
+            background-position-y: initial;
+            background-size: 100%;
+            background-attachment: initial;
+            background-origin: initial;
+            background-clip: initial;
+            background-color: initial;
+            height: 130px;
+        }
+        .movieSchedule2__listImgCinema {
+            min-height: 705px;
+            width: 92px;
+            border: 1px solid #ebebec;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+            .nav-pills {
+                text-align: center;
+                .nav-link.active{
+                    opacity: 1;
+                }
+                .nav-link {
+                    background-color: $color-white-0;
+                    opacity: .5;
+                    padding: 20px;
+                    transition: all .2s;
+                    border-bottom: 1px solid #ebebec;
+                    img {
+                        width: 50px;
+                    }
+                    &:hover{
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        .movieSchedule2__listCinemaAndFilm {
+            .movieSchedule2__cinema {
+                min-height: 705px;
+                border-top: 1px solid #ebebec;
+                border-bottom: 1px solid #ebebec;
+                width: 30%;
+                .cinema__item.active{
+                    opacity: 1;
+                }
+                .cinema__item {
+                    padding: 15px;
+                    padding-left: 20px;
+                    float: left;
+                    clear: both;
+                    width: 100%;
+                    position: relative;
+                    opacity: 0.5;
+                    cursor: pointer;
+                    transition: all 0.2s;
+                    // border-bottom: 1px solid #ebebec;
+                    .imgCinema {
+                        img {
+                            width: 50px;
+                            margin-top: 3px;
+                        }
+                    }
+                    .infoCinema {
+                        text-decoration: none;
+                        color: $color-black-0;
+                        max-width: 195px;
+                        .cinema__address {
+                            @include styleText($color-gray-2, $fs-5, $fw-normal);
+                            margin: 0;
+                        }
+                        .cinema__detail {
+                            @include styleText($color-red-0, $fs-5, $fw-normal);
+                            margin: 0;
+                        }
+                    }
+                    &:after{
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        width: calc(100% - 40px);
+                        transform: translateX(-50%);
+                        border-bottom: 1px solid #fff;
+                        border-color: rgba(238,238,238,.88);
+                    }
+                    &:hover{
+                        opacity: 1;
+                    }
+                }
+            }
+            .movieSchedule2__film {
+                max-height: 705px;
+                width: calc(100% - 30% - 92px);
+                border: 1px solid #ebebec;
+                border-top-right-radius: 4px;
+                border-bottom-right-radius: 4px;
+                position: relative;
+                overflow-y: scroll;
+                overflow-x: hidden;
+                .film__item {
+                    padding-bottom: 17px;
+                    padding-top: 20px;
+                    padding-right: 15px;
+                    padding-left: 20px;
+                    width: 100%;
+                    position: relative;
+                    margin-bottom: 0;
+                    border: none;
+                    box-shadow: none;
+                    -webkit-box-shadow: none;
+                    .film__detailsTop {
+                        .imgFilm {
+                            img {
+                                width: 50px;
+                            }
+                        }
+                        .infoFilm {
+                            text-decoration: none;
+                            .film__name {
+                                @include styleText($color-black-0, $fs-0, $fw-bold);
+                            }
+                            .film__time {
+                                @include styleText($color-gray-2, $fs-5, $fw-normal);
+                                margin: 0;
+                            }
+                        }
+                    }
+                    .film__detailsBottom {
+                        .film__detailsBottom__eleP {
+                            margin-top: 15px;
+                            margin-bottom: 5px;
+                            @include styleText($color-black-0, $fs-4, $fw-bold);
+                        }
+                        .film__detailsBottom__eleA {
+                            @include styleText($color-gray-2, $fs-5, $fw-normal);
+                            border: 1px solid #e4e4e4;
+                            padding: 5px 15px;
+                            transition: all 0.2s;
+                            text-decoration: none;
+                            text-align: center;
+                            background-color: rgba(246, 246, 246, 0.5);
+                            border-radius: 7px;
+                            display: inline-block;
+                            margin-top: 5px;
+                            .film__detailsBottom__eleSpan {
+                                @include styleText($color-green-2, $fs-2, $fw-bold-2);
+                                &:hover {
+                                    color: $color-red-0;
+                                }
+                            }
+                        }
+                    }
+                    &:after{
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        width: calc(100% - 40px);
+                        transform: translateX(-50%);
+                        border-bottom: 1px solid #fff;
+                        border-color: rgba(238,238,238,.88);
+                    }
+                }
+                &::-webkit-scrollbar{
+                    width: 5px;
+                    background-color: #F5F5F5;
+                }
+                &::-webkit-scrollbar-thumb {
+                    border-radius: 10px;
+                    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+                    background-color: #CCCCCC;
+                }
+            }
+        }
+    }
+}

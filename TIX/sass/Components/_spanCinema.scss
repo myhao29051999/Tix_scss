@@ -1,0 +1,18 @@
+.spanGreen {
+    @include styleText($color-green-1, $fs-0, $fw-bold);
+}
+.spanPurple {
+    @include styleText(#df0d7a, $fs-0, $fw-bold);
+}
+.spanGray {
+    @include styleText(#9c9c9c, $fs-0, $fw-bold);
+}
+.spanOrange {
+    @include styleText(#e5a813, $fs-0, $fw-bold);
+}
+.spanBlack {
+    @include styleText($color-black-0, $fs-0, $fw-bold);
+}
+.spanRed {
+    @include styleText(#ca4137, $fs-0, $fw-bold);
+}

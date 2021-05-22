@@ -1,0 +1,154 @@
+.application {
+    .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .col-xs-12 {
+        width: 100%;
+    }
+
+    #homeApp {
+        padding: 120px 0 80px 0;
+        background-image: url(../img/backapp.jpg);
+        background-size: contain;
+        
+        .mainWidth {
+            max-width: 940px;
+            float: none;
+            margin: auto;
+            clear: both;
+
+            .left_app {
+                padding-top: 40px;
+                .textLeft {
+                    color: #fff;
+                    font-weight: 700;
+                    font-size: xx-large;
+                }
+                .textSmallLeft {
+                    color: #fff;
+                    font-size: medium;
+                }
+                p {
+                    margin: 0 0 10px;
+                }
+                .buttonLeft {
+                    background-color: #fb4226;
+                    padding: 10px 20px;
+                    color: #fff;
+                    font-size: medium;
+                    font-weight: 700;
+                    border: none;
+                    border-radius: 4px;
+                }
+                .textAppUnder {
+                    color: #fff;
+                    padding-top: 10px;
+                    .tagA {
+                        color: #fff;
+                        border-bottom: 1px solid #fff;
+                    }
+                    a {
+                        text-decoration: none;
+                        cursor: pointer;
+                        transition: all 0.2s;
+                    }
+                    a:hover {
+                        text-decoration: none;
+                    }
+                }
+            }
+            .right_app {
+                position: relative;
+                padding: 0;
+                .phone-img {
+                    padding: 0 28%;
+                }
+                .img-responsive {
+                    display: block;
+                    max-width: 100%;
+                    height: auto;
+                }
+                .slideScreen {
+                    position: absolute;
+                    padding: 1.5% 29.3% 0 29.3%;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    .item {
+                        img {
+                            border-radius: 10px;
+                       
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.application {
+
+    @include responsive("large-991") {
+        .row {
+            #homeApp {
+                padding: 50px 0 80px 0;
+                
+                .mainWidth {
+                    .row {
+                        text-align: center;
+                        display: block;
+                      
+                    }
+                }
+                
+                .left_right{
+                    margin-left: 0px;
+                    margin-right:0;
+              
+                }
+                .right_app{
+                    .img-responsive{
+                        width: 100%;
+                       
+                 
+                    }
+                   
+                }
+            }
+        }
+    }
+    // @include responsive("small") {
+    //     .row {
+    //         #homeApp {
+    //             padding: 50px 0 80px 0;
+                
+    //             .mainWidth {
+    //                 display: block;
+    //                 .row {
+    //                     text-align: center;
+    //                     display: block;
+    //                     .left_app{
+    //                         margin-left: 240px;
+    //                     }
+    //                 }
+    //             }
+                
+    //             .left_right{
+    //                 margin-left: 0px;
+    //                 margin-right:0;
+              
+    //             }
+    //             .right_app{
+    //                 .img-responsive{
+    //                     width: 100%;
+    //                     margin-left: 240px;
+                 
+    //                 }
+    //                 .slideScreen{
+    //                     margin-left: 240px;
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
+}

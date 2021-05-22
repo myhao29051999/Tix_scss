@@ -1,0 +1,28 @@
+//Thêm css cho các kiểu chữ
+@mixin styleText($color,$fs,$fw) {
+    color: $color;
+    font-size: $fs;
+    font-weight: $fw;
+}
+//Button
+@mixin styleButton($display,$width,$height,$bg-color,$border-radius,$text-align,$margin-right){
+    display: $display;
+    width: $width;
+    height: $height;
+    background-color: $bg-color;
+    border-radius: $border-radius;
+    text-align: $text-align;
+    margin-right: $margin-right;
+}
+//Responsive
+@mixin responsive($screen){
+    @if(map-has-key($map:$breakpoints, $key:$screen)){
+        $value: map-get($map:$breakpoints, $key:$screen);
+
+        @media screen and (max-width:$value){
+            @content;
+        }
+    }@else{
+        @warn "Màn hình chưa được khai báo";
+    }
+}

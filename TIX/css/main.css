@@ -1,0 +1,2048 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  color: #000;
+  font-size: 15px;
+  font-weight: normal;
+  font-family: sans-serif;
+}
+
+.owl-prev,
+.owl-next {
+  position: absolute;
+  top: 35%;
+  left: 1%;
+}
+
+.owl-prev span,
+.owl-next span {
+  color: #9b9b9b;
+  font-size: 70px;
+  font-weight: normal;
+  opacity: 0.5;
+  border: none;
+}
+
+.owl-prev:focus,
+.owl-next:focus {
+  outline: none;
+  border: none;
+}
+
+.owl-next {
+  left: unset;
+  right: 1%;
+}
+
+.dropup .btn {
+  border: 1px solid #000;
+}
+
+.dropup .btn:focus {
+  outline: 0;
+  box-shadow: none;
+}
+
+.dropup .btn:hover {
+  color: #000;
+}
+
+.owl-dots {
+  position: absolute;
+  bottom: 22%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.owl-theme .owl-dots .owl-dot.active span {
+  background: #fb4226;
+  border: none;
+}
+
+.movieSchedule1 .dropdown-toggle::after {
+  margin-left: 90px;
+}
+
+.scheduleFilm__btnGreen {
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  display: inline-block;
+  width: 47px;
+  height: 20px;
+  background-color: #00ac4d;
+  border-radius: 4px;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.scheduleFilm__btnRed {
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  display: inline-block;
+  width: 47px;
+  height: 20px;
+  background-color: #fb4226;
+  border-radius: 4px;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.spanGreen {
+  color: #8bc541;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.spanPurple {
+  color: #df0d7a;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.spanGray {
+  color: #9c9c9c;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.spanOrange {
+  color: #e5a813;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.spanBlack {
+  color: #000;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.spanRed {
+  color: #ca4137;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  background-color: #fff;
+}
+
+header .myNavBar .logoWeb img {
+  width: 50px;
+  height: 50px;
+}
+
+header .myNavBar .myCollapse .navbar-nav .nav-item .nav-link {
+  color: #000;
+  font-size: 15px;
+  font-weight: normal;
+}
+
+header .myNavBar .myCollapse .navbar-nav .nav-item .nav-link:hover {
+  color: #fb4226;
+}
+
+header .myNavBar .myCollapse .header__right a:first-child {
+  color: #9b9b9b;
+  font-size: 15px;
+  font-weight: normal;
+  border-right: 1px solid #e5dcdc;
+  padding-right: 12px;
+}
+
+header .myNavBar .myCollapse .header__right a:first-child img {
+  width: 30px;
+  height: 30px;
+  border-radius: 25px;
+  margin-right: 5px;
+}
+
+header .myNavBar .myCollapse .header__right a:first-child:hover {
+  text-decoration: none;
+}
+
+header .myNavBar .myCollapse .header__right a:nth-child(2) #selectLocation {
+  color: #9b9b9b;
+}
+
+header .myNavBar .myCollapse .header__right a:nth-child(2) #selectLocation option {
+  color: #000;
+}
+
+header .myNavBar .myCollapse .header__right .openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #fff;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+}
+
+header .myNavBar .myCollapse .header__right .sidepanel {
+  width: 0;
+  position: fixed;
+  z-index: 10;
+  height: 250px;
+  top: 0;
+  right: 0;
+  background-color: #fff;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+header .myNavBar .myCollapse .header__right .sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+  font-weight: normal;
+  display: block;
+  transition: 0.3s;
+}
+
+header .myNavBar .myCollapse .header__right .sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+}
+
+header .myNavBar .myCollapse .header__right .sidepanel .sidepanel__dangNhap {
+  font-size: 14px;
+}
+
+header .myNavBar .myCollapse .header__right .sidepanel .sidepanel__dangNhap:hover span {
+  color: #fb4226;
+}
+
+@media screen and (max-width: 768px) {
+  header .myCollapse .navbar-nav .nav-item {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 737px) {
+  header .header__right a {
+    display: none;
+  }
+  header .header__right .openbtn {
+    display: block;
+  }
+}
+
+.tix__carousel {
+  width: 100%;
+}
+
+.tix__carousel .carousel__content .item .img__item img {
+  display: block;
+  width: 100%;
+  height: 654px;
+}
+
+.tix__carousel .carousel__content .item .myVenobox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  line-height: 80px;
+  text-align: center;
+  transition: all 0.5s;
+  background-color: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  color: #fff;
+}
+
+.tix__carousel .carousel__content .item:hover .myVenobox {
+  opacity: 1;
+}
+
+.tix__carousel .carousel__content .item:hover .myVenobox:hover {
+  opacity: 0.5;
+}
+
+@media screen and (max-width: 578px) {
+  .carousel .carousel__content {
+    display: none;
+  }
+}
+
+.movieSchedule1 .movieSchedule1__content {
+  width: 80%;
+  margin: auto;
+  position: relative;
+}
+
+.movieSchedule1 .movieSchedule1__content .navbar__movie {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  max-width: 940px;
+  margin: auto;
+  height: 84px;
+  position: absolute;
+  bottom: 98%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 100%;
+  display: block;
+  background-color: #fff;
+}
+
+.movieSchedule1 .movieSchedule1__content .navbar__movie .navbar-collapse {
+  justify-content: center;
+  margin-top: 14px;
+}
+
+.movieSchedule1 .movieSchedule1__content .navbar__movie .navbar-collapse .nav-item:nth-child(1) .dropdown-menu {
+  max-height: 300px;
+  overflow-y: scroll;
+}
+
+.movieSchedule1 .movieSchedule1__content .navbar__movie .navbar-collapse .nav-item:nth-child(1) .dropdown-menu .dropdown-item {
+  line-height: 1.42857143;
+  padding: 3px 20px;
+  transition: all 0.5s;
+}
+
+.movieSchedule1 .movieSchedule1__content .navbar__movie .navbar-collapse .nav-item:nth-child(1) .dropdown-menu .dropdown-item:hover {
+  color: #fff;
+  background-color: #60c5ef;
+}
+
+.movieSchedule1 .movieSchedule1__content .navbar__movie .navbar-collapse .nav-item:nth-child(1) .dropdown-menu::-webkit-scrollbar {
+  width: 5px;
+  background-color: #F5F5F5;
+}
+
+.movieSchedule1 .movieSchedule1__content .navbar__movie .navbar-collapse .nav-item:nth-child(1) .dropdown-menu::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  background-color: #CCCCCC;
+}
+
+.movieSchedule1 .movieSchedule1__content .navbar__movie .navbar-collapse .nav-item:last-child .btnMuaVe {
+  padding: 8px 25px;
+  background-color: #4a4a4a;
+}
+
+.movieSchedule1 .movieSchedule1__content .navbar__movie .navbar-collapse .nav-item {
+  margin-right: 15px;
+}
+
+.movieSchedule1 .movieSchedule1__content .navbar__movie .navbar-collapse .nav-item .nav-link {
+  border-right: 1px solid #e5dcdc;
+  color: #000;
+  font-size: 15px;
+  font-weight: normal;
+}
+
+.movieSchedule1 .movieSchedule1__content .schedule1Content__movie .schedule1__navTab {
+  margin-top: 70px;
+}
+
+.movieSchedule1 .movieSchedule1__content .schedule1Content__movie .schedule1__navTab .nav {
+  margin-bottom: 30px;
+}
+
+.movieSchedule1 .movieSchedule1__content .schedule1Content__movie .schedule1__navTab .nav .nav-item .nav-link {
+  color: #000;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "SF Medium";
+  margin-right: 10px;
+  transform: translateX(0);
+}
+
+.movieSchedule1 .movieSchedule1__content .schedule1Content__movie .schedule1__navTab .nav .nav-item .nav-link.active {
+  color: #fa5238;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.movieSchedule1 .movieSchedule1__content .schedule1Content__movie .schedule1__navTab .nav .nav-item:nth-child(2) {
+  margin-top: 4px;
+}
+
+.movieSchedule1 .movieSchedule1__content .schedule1Content__movie .schedule1__navTab .nav .nav-item:nth-child(2) .nav-link {
+  transform: scale(1);
+  transition: all 0.5s;
+}
+
+.movieSchedule1 .movieSchedule1__content .schedule1Content__movie .schedule1__navTab .nav .nav-item:nth-child(2) .nav-link:hover {
+  transform: scale(1.2);
+  margin-left: 15px;
+}
+
+.movieSchedule1 .movieSchedule1__content .schedule1Content__movie .schedule1__showListFilms .showListFilm1 {
+  width: 97.2% auto;
+  margin: auto;
+}
+
+.movieSchedule1 .movieSchedule1__content .schedule1Content__movie .schedule1__showListFilms .showListFilm1 .showListFilm1__content {
+  width: 82%;
+  margin: auto;
+}
+
+.movieSchedule1 .movieSchedule1__content .schedule1Content__movie .schedule1__showListFilms .showListFilm1 .showListFilm1__content .showListFilm1__item .show__img {
+  position: relative;
+}
+
+.movieSchedule1 .movieSchedule1__content .schedule1Content__movie .schedule1__showListFilms .showListFilm1 .showListFilm1__content .showListFilm1__item .show__img img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.movieSchedule1 .movieSchedule1__content .schedule1Content__movie .schedule1__showListFilms .showListFilm1 .showListFilm1__content .showListFilm1__item .show__img .showListFilm1__overlayIcon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #000, transparent 100%);
+  border-radius: 5px;
+  opacity: 0;
+  overflow: hidden;
+  flex-flow: 0;
+  transition: all 0.5s;
+}
+
+.movieSchedule1 .movieSchedule1__content .schedule1Content__movie .schedule1__showListFilms .showListFilm1 .showListFilm1__content .showListFilm1__item .show__img .showListFilm1__overlayIcon .myVenobox {
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  line-height: 50px;
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.movieSchedule1 .movieSchedule1__content .schedule1Content__movie .schedule1__showListFilms .showListFilm1 .showListFilm1__content .showListFilm1__item .show__filmDetails {
+  position: relative;
+}
+
+.movieSchedule1 .movieSchedule1__content .schedule1Content__movie .schedule1__showListFilms .showListFilm1 .showListFilm1__content .showListFilm1__item .show__filmDetails .nameOfFilm {
+  margin-top: 10px;
+  height: 10%;
+  max-height: 10%;
+}
+
+.movieSchedule1 .movieSchedule1__content .schedule1Content__movie .schedule1__showListFilms .showListFilm1 .showListFilm1__content .showListFilm1__item .show__filmDetails .nameOfFilm span:nth-child(2) {
+  color: #000;
+  font-size: 16px;
+  font-weight: 600;
+  overflow-x: hidden;
+}
+
+.movieSchedule1 .movieSchedule1__content .schedule1Content__movie .schedule1__showListFilms .showListFilm1 .showListFilm1__content .showListFilm1__item .show__filmDetails p {
+  color: #4a4a4a;
+  font-size: 13px;
+  font-weight: normal;
+}
+
+.movieSchedule1 .movieSchedule1__content .schedule1Content__movie .schedule1__showListFilms .showListFilm1 .showListFilm1__content .showListFilm1__item .show__filmDetails .filmDetails__overlayBtnMuaVe {
+  position: absolute;
+  top: 0;
+}
+
+.movieSchedule1 .movieSchedule1__content .schedule1Content__movie .schedule1__showListFilms .showListFilm1 .showListFilm1__content .showListFilm1__item .show__filmDetails .filmDetails__overlayBtnMuaVe .btnMuaVe {
+  width: 100%;
+  border: none;
+  background: linear-gradient(to left, #fb4226, #ce3017 100%);
+  padding: 10px 0;
+  color: #fff;
+  font-size: 18px;
+  font-weight: normal;
+  border-radius: 5px;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.movieSchedule1 .movieSchedule1__content .schedule1Content__movie .schedule1__showListFilms .showListFilm1 .showListFilm1__content .showListFilm1__item:hover .show__img .showListFilm1__overlayIcon {
+  opacity: 1;
+}
+
+.movieSchedule1 .movieSchedule1__content .schedule1Content__movie .schedule1__showListFilms .showListFilm1 .showListFilm1__content .showListFilm1__item:hover .show__filmDetails .nameOfFilm {
+  opacity: 0;
+}
+
+.movieSchedule1 .movieSchedule1__content .schedule1Content__movie .schedule1__showListFilms .showListFilm1 .showListFilm1__content .showListFilm1__item:hover .show__filmDetails p {
+  opacity: 0;
+}
+
+.movieSchedule1 .movieSchedule1__content .schedule1Content__movie .schedule1__showListFilms .showListFilm1 .showListFilm1__content .showListFilm1__item:hover .show__filmDetails .filmDetails__overlayBtnMuaVe {
+  width: 100%;
+}
+
+.movieSchedule1 .movieSchedule1__content .schedule1Content__movie .schedule1__showListFilms .showListFilm1 .showListFilm1__content .showListFilm1__item:hover .show__filmDetails .filmDetails__overlayBtnMuaVe .btnMuaVe {
+  opacity: 1;
+}
+
+@media screen and (max-width: 992px) {
+  .movieSchedule1 .movieSchedule1__content .navbar__movie {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .movieSchedule1 .movieSchedule1__content {
+    width: 100%;
+  }
+  .movieSchedule1 .movieSchedule1__content .navbar__movie {
+    min-width: 940px;
+  }
+}
+
+.movieSchedule2 .movieSchedule2__content {
+  width: 65%;
+  margin: auto;
+}
+
+.movieSchedule2 .movieSchedule2__content .movieSchedule2__backgroundImg {
+  background-image: url(../img/back-news.png);
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: 100%;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: initial;
+  height: 130px;
+}
+
+.movieSchedule2 .movieSchedule2__content .movieSchedule2__listImgCinema {
+  min-height: 705px;
+  width: 92px;
+  border: 1px solid #ebebec;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.movieSchedule2 .movieSchedule2__content .movieSchedule2__listImgCinema .nav-pills {
+  text-align: center;
+}
+
+.movieSchedule2 .movieSchedule2__content .movieSchedule2__listImgCinema .nav-pills .nav-link.active {
+  opacity: 1;
+}
+
+.movieSchedule2 .movieSchedule2__content .movieSchedule2__listImgCinema .nav-pills .nav-link {
+  background-color: #fff;
+  opacity: .5;
+  padding: 20px;
+  transition: all .2s;
+  border-bottom: 1px solid #ebebec;
+}
+
+.movieSchedule2 .movieSchedule2__content .movieSchedule2__listImgCinema .nav-pills .nav-link img {
+  width: 50px;
+}
+
+.movieSchedule2 .movieSchedule2__content .movieSchedule2__listImgCinema .nav-pills .nav-link:hover {
+  opacity: 1;
+}
+
+.movieSchedule2 .movieSchedule2__content .movieSchedule2__listCinemaAndFilm .movieSchedule2__cinema {
+  min-height: 705px;
+  border-top: 1px solid #ebebec;
+  border-bottom: 1px solid #ebebec;
+  width: 30%;
+}
+
+.movieSchedule2 .movieSchedule2__content .movieSchedule2__listCinemaAndFilm .movieSchedule2__cinema .cinema__item.active {
+  opacity: 1;
+}
+
+.movieSchedule2 .movieSchedule2__content .movieSchedule2__listCinemaAndFilm .movieSchedule2__cinema .cinema__item {
+  padding: 15px;
+  padding-left: 20px;
+  float: left;
+  clear: both;
+  width: 100%;
+  position: relative;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.movieSchedule2 .movieSchedule2__content .movieSchedule2__listCinemaAndFilm .movieSchedule2__cinema .cinema__item .imgCinema img {
+  width: 50px;
+  margin-top: 3px;
+}
+
+.movieSchedule2 .movieSchedule2__content .movieSchedule2__listCinemaAndFilm .movieSchedule2__cinema .cinema__item .infoCinema {
+  text-decoration: none;
+  color: #000;
+  max-width: 195px;
+}
+
+.movieSchedule2 .movieSchedule2__content .movieSchedule2__listCinemaAndFilm .movieSchedule2__cinema .cinema__item .infoCinema .cinema__address {
+  color: #949494;
+  font-size: 12px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.movieSchedule2 .movieSchedule2__content .movieSchedule2__listCinemaAndFilm .movieSchedule2__cinema .cinema__item .infoCinema .cinema__detail {
+  color: #fb4226;
+  font-size: 12px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.movieSchedule2 .movieSchedule2__content .movieSchedule2__listCinemaAndFilm .movieSchedule2__cinema .cinema__item:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: calc(100% - 40px);
+  transform: translateX(-50%);
+  border-bottom: 1px solid #fff;
+  border-color: rgba(238, 238, 238, 0.88);
+}
+
+.movieSchedule2 .movieSchedule2__content .movieSchedule2__listCinemaAndFilm .movieSchedule2__cinema .cinema__item:hover {
+  opacity: 1;
+}
+
+.movieSchedule2 .movieSchedule2__content .movieSchedule2__listCinemaAndFilm .movieSchedule2__film {
+  max-height: 705px;
+  width: calc(100% - 30% - 92px);
+  border: 1px solid #ebebec;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  position: relative;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.movieSchedule2 .movieSchedule2__content .movieSchedule2__listCinemaAndFilm .movieSchedule2__film .film__item {
+  padding-bottom: 17px;
+  padding-top: 20px;
+  padding-right: 15px;
+  padding-left: 20px;
+  width: 100%;
+  position: relative;
+  margin-bottom: 0;
+  border: none;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+.movieSchedule2 .movieSchedule2__content .movieSchedule2__listCinemaAndFilm .movieSchedule2__film .film__item .film__detailsTop .imgFilm img {
+  width: 50px;
+}
+
+.movieSchedule2 .movieSchedule2__content .movieSchedule2__listCinemaAndFilm .movieSchedule2__film .film__item .film__detailsTop .infoFilm {
+  text-decoration: none;
+}
+
+.movieSchedule2 .movieSchedule2__content .movieSchedule2__listCinemaAndFilm .movieSchedule2__film .film__item .film__detailsTop .infoFilm .film__name {
+  color: #000;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.movieSchedule2 .movieSchedule2__content .movieSchedule2__listCinemaAndFilm .movieSchedule2__film .film__item .film__detailsTop .infoFilm .film__time {
+  color: #949494;
+  font-size: 12px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.movieSchedule2 .movieSchedule2__content .movieSchedule2__listCinemaAndFilm .movieSchedule2__film .film__item .film__detailsBottom .film__detailsBottom__eleP {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  color: #000;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.movieSchedule2 .movieSchedule2__content .movieSchedule2__listCinemaAndFilm .movieSchedule2__film .film__item .film__detailsBottom .film__detailsBottom__eleA {
+  color: #949494;
+  font-size: 12px;
+  font-weight: normal;
+  border: 1px solid #e4e4e4;
+  padding: 5px 15px;
+  transition: all 0.2s;
+  text-decoration: none;
+  text-align: center;
+  background-color: rgba(246, 246, 246, 0.5);
+  border-radius: 7px;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.movieSchedule2 .movieSchedule2__content .movieSchedule2__listCinemaAndFilm .movieSchedule2__film .film__item .film__detailsBottom .film__detailsBottom__eleA .film__detailsBottom__eleSpan {
+  color: #108f3e;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.movieSchedule2 .movieSchedule2__content .movieSchedule2__listCinemaAndFilm .movieSchedule2__film .film__item .film__detailsBottom .film__detailsBottom__eleA .film__detailsBottom__eleSpan:hover {
+  color: #fb4226;
+}
+
+.movieSchedule2 .movieSchedule2__content .movieSchedule2__listCinemaAndFilm .movieSchedule2__film .film__item:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: calc(100% - 40px);
+  transform: translateX(-50%);
+  border-bottom: 1px solid #fff;
+  border-color: rgba(238, 238, 238, 0.88);
+}
+
+.movieSchedule2 .movieSchedule2__content .movieSchedule2__listCinemaAndFilm .movieSchedule2__film::-webkit-scrollbar {
+  width: 5px;
+  background-color: #F5F5F5;
+}
+
+.movieSchedule2 .movieSchedule2__content .movieSchedule2__listCinemaAndFilm .movieSchedule2__film::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  background-color: #CCCCCC;
+}
+
+.film24h {
+  padding: 50px;
+}
+
+.film24h .mainMaxWidth {
+  max-width: 940px;
+  float: none;
+  margin: auto;
+  clear: both;
+}
+
+.film24h .block {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.film24h .homeNews {
+  background-image: url(../img/back-news.png);
+  padding-top: 120px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.film24h .homeNews .banner-ads {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  cursor: pointer;
+}
+
+.film24h .homeNews .nav .nav-item .nav-link {
+  color: #000;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "SF Medium";
+  margin-right: 10px;
+  transform: translateX(0);
+}
+
+.film24h .homeNews .nav .nav-item .nav-link.active {
+  color: #fa5238;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.film24h .homeNews .nav .nav-item:nth-child(2) {
+  margin-top: 4px;
+}
+
+.film24h .homeNews .nav .nav-item:nth-child(2) .nav-link {
+  transform: scale(1);
+  transition: all 0.5s;
+}
+
+.film24h .homeNews .nav .nav-item:nth-child(2) .nav-link:hover {
+  transform: scale(1.2);
+  margin-left: 15px;
+}
+
+.film24h .homeNews .nav .nav-item:nth-child(3) {
+  margin-top: 4px;
+}
+
+.film24h .homeNews .nav .nav-item:nth-child(3) .nav-link {
+  transform: scale(1);
+  transition: all 0.5s;
+}
+
+.film24h .homeNews .nav .nav-item:nth-child(3) .nav-link:hover {
+  transform: scale(1.2);
+  margin-left: 15px;
+}
+
+.film24h .homeNews .showingNews .tab-content .showingNews_tab1 {
+  /* chia cột */
+  display: grid;
+  /* Chia cột- mỗi cột có kích thước bằng nhau nên dùng 1/4 */
+  grid-template-columns: repeat(2, 1fr);
+  /* cách đều các mặt tiếp xúc */
+  gap: 20px 25px;
+  margin: 0 auto;
+}
+
+.film24h .homeNews .showingNews .tab-content .showingNews_tab1 .thumbnailGeneral img {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  transition: all 0.2s;
+  top: 0;
+  left: 0;
+  line-height: 20px;
+}
+
+.film24h .homeNews .showingNews .tab-content .showingNews_tab1 a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.film24h .homeNews .showingNews .tab-content .showingNews_tab1 .newsTitle {
+  line-height: 20px;
+  font-family: "SF Medium";
+  height: 42px;
+  font-size: 17px;
+  margin-bottom: 15px;
+  color: black;
+  font-weight: 700;
+  padding: 10px 0;
+}
+
+.film24h .homeNews .showingNews .tab-content .showingNews_tab1 .newsTitle:hover {
+  color: red;
+}
+
+.film24h .homeNews .showingNews .tab-content .showingNews_tab1 .newsDescription {
+  text-align: justify;
+  font-size: 14px;
+  color: #4a4a4a;
+  font-family: "SF Regular";
+  padding: 0 5px 0 0;
+  line-height: 19px;
+  height: 55px;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+.film24h .homeNews .showingNews .tab-content .showingNews_tab1 .blockIconFacebook {
+  float: left;
+  width: 100%;
+  height: 25px;
+  padding-left: 0;
+}
+
+.film24h .homeNews .showingNews .tab-content .showingNews_tab1 .blockIconFacebook .wrapIcon {
+  display: inline-table;
+  margin-right: 25px;
+  cursor: pointer;
+}
+
+.film24h .homeNews .showingNews .tab-content .showingNews_tab1 .blockIconFacebook .wrapIcon .iconFacebook {
+  margin-right: 10px;
+  margin-top: 2px;
+  height: auto;
+  width: 18px;
+}
+
+.film24h .homeNews .showingNews .tab-content .showingNews_tab1 .blockIconFacebook .wrapIcon .amount {
+  color: #bbb;
+  font-size: 12px;
+  line-height: 1;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.film24h .homeNews .showingNews .tab-content .showingNews_tab1 .blockIconFacebook .wrapIcon .comment {
+  display: table-cell;
+}
+
+.film24h .homeNews .showingNews .tab-content .showingNews_tab2 {
+  /* chia cột */
+  display: grid;
+  /* Chia cột- mỗi cột có kích thước bằng nhau nên dùng 1/4 */
+  grid-template-columns: repeat(3, 1fr);
+  /* cách đều các mặt tiếp xúc */
+  gap: 20px 25px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.film24h .homeNews .showingNews .tab-content .showingNews_tab2 .thumbnailGeneral img {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  transition: all 0.2s;
+  top: 0;
+  left: 0;
+  line-height: 20px;
+}
+
+.film24h .homeNews .showingNews .tab-content .showingNews_tab2 a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.film24h .homeNews .showingNews .tab-content .showingNews_tab2 .newsTitle {
+  line-height: 20px;
+  font-family: "SF Medium";
+  height: 47px;
+  font-size: 16px;
+  color: black;
+  font-weight: 700;
+  padding: 10px 0;
+  display: -webkit-box;
+  overflow: hidden;
+}
+
+.film24h .homeNews .showingNews .tab-content .showingNews_tab2 .newsTitle:hover {
+  color: red;
+}
+
+.film24h .homeNews .showingNews .tab-content .showingNews_tab2 .newsDescription {
+  text-align: justify;
+  font-size: 14px;
+  color: #4a4a4a;
+  font-family: "SF Regular";
+  padding: 0 5px 0 0;
+  line-height: 19px;
+  height: 55px;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+.film24h .homeNews .showingNews .tab-content .showingNews_tab2 .blockIconFacebook {
+  float: left;
+  width: 100%;
+  height: 25px;
+  padding-left: 0;
+}
+
+.film24h .homeNews .showingNews .tab-content .showingNews_tab2 .blockIconFacebook .wrapIcon {
+  display: inline-table;
+  margin-right: 25px;
+  cursor: pointer;
+}
+
+.film24h .homeNews .showingNews .tab-content .showingNews_tab2 .blockIconFacebook .wrapIcon .iconFacebook {
+  margin-right: 10px;
+  margin-top: 2px;
+  height: auto;
+  width: 18px;
+}
+
+.film24h .homeNews .showingNews .tab-content .showingNews_tab2 .blockIconFacebook .wrapIcon .amount {
+  color: #bbb;
+  font-size: 12px;
+  line-height: 1;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.film24h .homeNews .showingNews .tab-content .showingNews_tab2 .blockIconFacebook .wrapIcon .comment {
+  display: table-cell;
+}
+
+.film24h .homeNews .showingNews .tab-content .showingNews_tab2 .news_right {
+  display: grid;
+  grid-template-columns: repeat(2, 4fr);
+  margin: 0 auto;
+}
+
+.film24h .homeNews .showingNews .tab-content .showingNews_tab2 .news_right .general_news img {
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+}
+
+.film24h .homeNews .showingNews .tab-content .showingNews_tab2 .news_right .h_title {
+  margin-left: -85px;
+  opacity: 0.6;
+  font-family: "SF Regular";
+}
+
+.film24h .homeNews .showingNews .tab-content .wrapButtonSeeMoreNews .btnViewMore {
+  font-size: 14px;
+  color: #949494;
+  font-family: "SF Regular";
+  border: 1px solid #949494;
+  border-radius: 4px;
+  text-align: center;
+  background: 0 0;
+  padding: 7px 25px;
+  transition: all 0.2s;
+  margin: auto;
+  margin-top: 35px;
+  margin-bottom: 45px;
+  display: block;
+}
+
+.film24h .homeNews .showingNews .tab-content .wrapButtonSeeMoreNews .btnViewMore:hover {
+  background-color: #fb4226;
+  border-color: #fb4226;
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .film24h .homeNews .showingNews .tab-content .showingNews_tab2 .news_right .h_title {
+    margin-left: -60px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .film24h .homeNews {
+    padding-top: 90px;
+  }
+  .film24h .homeNews .showingNews .tab-content .showingNews_tab1 {
+    display: inline;
+  }
+  .film24h .homeNews .showingNews .tab-content .showingNews_tab1 .newsDescription {
+    margin-top: -20px;
+  }
+  .film24h .homeNews .showingNews .tab-content .showingNews_tab1 .blockIconFacebook {
+    margin-top: -10px;
+  }
+  .film24h .homeNews .showingNews .tab-content .showingNews_tab2 {
+    display: inline;
+  }
+  .film24h .homeNews .showingNews .tab-content .showingNews_tab2 .newsDescription {
+    margin-top: -10px;
+  }
+  .film24h .homeNews .showingNews .tab-content .showingNews_tab2 .blockIconFacebook {
+    margin-top: -10px;
+  }
+  .film24h .homeNews .showingNews .tab-content .showingNews_tab2 .news_right .h_title {
+    margin-left: -225px;
+  }
+}
+
+.application .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.application .col-xs-12 {
+  width: 100%;
+}
+
+.application #homeApp {
+  padding: 120px 0 80px 0;
+  background-image: url(../img/backapp.jpg);
+  background-size: contain;
+}
+
+.application #homeApp .mainWidth {
+  max-width: 940px;
+  float: none;
+  margin: auto;
+  clear: both;
+}
+
+.application #homeApp .mainWidth .left_app {
+  padding-top: 40px;
+}
+
+.application #homeApp .mainWidth .left_app .textLeft {
+  color: #fff;
+  font-weight: 700;
+  font-size: xx-large;
+}
+
+.application #homeApp .mainWidth .left_app .textSmallLeft {
+  color: #fff;
+  font-size: medium;
+}
+
+.application #homeApp .mainWidth .left_app p {
+  margin: 0 0 10px;
+}
+
+.application #homeApp .mainWidth .left_app .buttonLeft {
+  background-color: #fb4226;
+  padding: 10px 20px;
+  color: #fff;
+  font-size: medium;
+  font-weight: 700;
+  border: none;
+  border-radius: 4px;
+}
+
+.application #homeApp .mainWidth .left_app .textAppUnder {
+  color: #fff;
+  padding-top: 10px;
+}
+
+.application #homeApp .mainWidth .left_app .textAppUnder .tagA {
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+
+.application #homeApp .mainWidth .left_app .textAppUnder a {
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.application #homeApp .mainWidth .left_app .textAppUnder a:hover {
+  text-decoration: none;
+}
+
+.application #homeApp .mainWidth .right_app {
+  position: relative;
+  padding: 0;
+}
+
+.application #homeApp .mainWidth .right_app .phone-img {
+  padding: 0 28%;
+}
+
+.application #homeApp .mainWidth .right_app .img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.application #homeApp .mainWidth .right_app .slideScreen {
+  position: absolute;
+  padding: 1.5% 29.3% 0 29.3%;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.application #homeApp .mainWidth .right_app .slideScreen .item img {
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 991px) {
+  .application .row #homeApp {
+    padding: 50px 0 80px 0;
+  }
+  .application .row #homeApp .mainWidth .row {
+    text-align: center;
+    display: block;
+  }
+  .application .row #homeApp .left_right {
+    margin-left: 0px;
+    margin-right: 0;
+  }
+  .application .row #homeApp .right_app .img-responsive {
+    width: 100%;
+  }
+}
+
+.partner .partner_company {
+  background-color: #222;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #949494;
+}
+
+.partner .partner_company .mainMaxWidth {
+  max-width: 940px;
+  margin: auto;
+}
+
+.partner .partner_company .mainMaxWidth .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.partner .partner_company .mainMaxWidth .row .title {
+  color: #fff;
+  font-size: 12px;
+}
+
+.partner .partner_company .mainMaxWidth .row .div2 {
+  padding-left: 0;
+  display: flex;
+}
+
+.partner .partner_company .mainMaxWidth .row .noPaddingLeft {
+  padding-left: 0;
+}
+
+.partner .partner_company .mainMaxWidth .row .fontSizeP a {
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+  color: #949494;
+  transition: all 0.5s;
+  line-height: 2.3;
+}
+
+.partner .partner_company .mainMaxWidth .row .fontSizeP a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.partner .partner_company .mainMaxWidth .hrPartner {
+  border-top: 1px solid #4a4a4a;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.partner .partner_company .linePartner {
+  margin-bottom: 15px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.partner .partner_company .iconConnect {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  margin-right: 15px;
+}
+
+.partner .partner_company .iconConnect:hover {
+  opacity: 0.7;
+}
+
+.partner .partner_company .icon1 {
+  background-color: #fff;
+}
+
+.partner .partner_company .div_flex {
+  display: -webkit-box;
+}
+
+.partner .partner_company .div_flex .textCenter {
+  text-align: center;
+}
+
+.partner .partner_company .div_flex .col-xs-6 {
+  width: 50%;
+}
+
+.partner .partner_company .iconApp {
+  background: 0 0;
+  height: 30px;
+  width: auto;
+  margin: 5px;
+}
+
+@media screen and (max-width: 868px) {
+  .partner .partner_company .hidden {
+    display: none;
+  }
+  .partner .partner_company .noHidden {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-left: 50px;
+  }
+  .partner .partner_company .noHidden .textChinhSach {
+    margin-left: 0px;
+  }
+  .partner .partner_company .textCenter .img_logo {
+    text-align: center;
+    margin-left: 60px;
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .partner .partner_company .hidden {
+    display: none;
+  }
+  .partner .partner_company .noHidden {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-left: 50px;
+  }
+  .partner .partner_company .noHidden .textChinhSach {
+    margin-left: 0px;
+  }
+  .partner .partner_company .textCenter .img_logo {
+    text-align: center;
+    margin-left: 60px;
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .partner .partner_company .hidden {
+    display: none;
+  }
+  .partner .partner_company .noHidden {
+    display: flex;
+    width: 100%;
+    margin-left: 215px;
+  }
+  .partner .partner_company .noHidden .textChinhSach {
+    margin-left: 10px;
+  }
+  .partner .partner_company .textCenter .img_logo {
+    padding: 20px 0;
+    margin-left: 40px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .partner .partner_company .hidden {
+    display: none;
+  }
+  .partner .partner_company .noHidden {
+    display: flex;
+    width: 100%;
+    margin-left: 150px;
+  }
+  .partner .partner_company .noHidden .textChinhSach {
+    margin-left: 10px;
+  }
+  .partner .partner_company .textCenter .img_logo {
+    padding: 20px 0;
+    margin-left: 40px;
+    width: 100%;
+  }
+}
+
+footer .footer_page {
+  background-color: #222;
+  color: #949494;
+}
+
+footer .footer_page .mainMaxWidth {
+  max-width: 940px;
+  margin: auto;
+}
+
+footer .footer_page .mainMaxWidth .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+footer .footer_page .mainMaxWidth .imgFooter {
+  text-align: center;
+  padding: 0;
+}
+
+footer .footer_page .mainMaxWidth .imgFooter .zionImg {
+  width: 80px;
+  height: auto;
+  border-radius: 8px;
+}
+
+footer .footer_page .mainMaxWidth .imgFooter .imgCongThuong {
+  width: 130px;
+  float: right;
+}
+
+footer .footer_page .mainMaxWidth .infoFooter {
+  color: #fff;
+  white-space: nowrap;
+  font-size: 70%;
+}
+
+footer .footer_page .mainMaxWidth .infoFooter span:first-child {
+  color: #fff;
+}
+
+footer .footer_page .mainMaxWidth .infoFooter span {
+  display: block;
+  line-height: 1.8;
+  color: #949494;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+footer .footer_page .mainMaxWidth .infoFooter .textFooter {
+  color: #fb4226;
+}
+
+footer .footer_page .mainMaxWidth .infoFooter .textFooter:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  footer .footer_page .mainMaxWidth .infoFooter {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  footer .footer_page .mainMaxWidth .row .imgFooter {
+    margin-left: 290px;
+  }
+  footer .footer_page .mainMaxWidth .row .imgFooter .zionImg {
+    display: block;
+    margin-left: 25px;
+  }
+  footer .footer_page .mainMaxWidth .row .imgFooter .imgCongThuong {
+    display: block;
+    margin: auto;
+    float: none;
+  }
+  footer .footer_page .mainMaxWidth .row .infoFooter {
+    margin-left: 70px;
+    padding: 5px;
+    white-space: initial;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  footer .footer_page .mainMaxWidth .row {
+    display: block;
+  }
+  footer .footer_page .mainMaxWidth .row .imgFooter {
+    margin-left: 230px;
+  }
+  footer .footer_page .mainMaxWidth .row .imgFooter .zionImg {
+    display: block;
+    margin-left: 25px;
+  }
+  footer .footer_page .mainMaxWidth .row .imgFooter .imgCongThuong {
+    display: block;
+    margin: auto;
+    float: none;
+  }
+  footer .footer_page .mainMaxWidth .row .infoFooter {
+    margin-left: 80px;
+    padding: 5px;
+    white-space: initial;
+  }
+}
+
+.tix__detail {
+  position: relative;
+}
+
+.tix__detail .tix__styleBlur {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.tix__detail .tix__styleBlur .posterLandscapeFilm {
+  filter: blur(15px);
+  margin: -11px 0 -5px -10px;
+  width: calc(100% + 5px);
+}
+
+.tix__detail .tix__styleGradient {
+  background: linear-gradient(to top, #0a2029, transparent 100%);
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.tix__detail .tix__content {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  width: 70%;
+  margin: auto;
+  max-width: 870px;
+}
+
+.tix__detail .tix__content .showListFilm1__item .show__img {
+  width: 218px;
+  height: 322px;
+  position: relative;
+  max-width: 220px;
+}
+
+.tix__detail .tix__content .showListFilm1__item .show__img img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.tix__detail .tix__content .showListFilm1__item .show__img .showListFilm1__overlayIcon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  opacity: 0;
+  overflow: hidden;
+  flex-flow: 0;
+  transition: all 0.5s;
+}
+
+.tix__detail .tix__content .showListFilm1__item .show__img .showListFilm1__overlayIcon .myVenobox {
+  display: block;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  line-height: 70px;
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.tix__detail .tix__content .showListFilm1__item .show__img:hover .showListFilm1__overlayIcon {
+  opacity: 1;
+}
+
+.tix__detail .tix__content .show_detail {
+  float: none;
+  clear: both;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 27%;
+  color: #e9e9e9;
+}
+
+.tix__detail .tix__content .show_detail .show__name {
+  font-size: 24px;
+}
+
+.tix__detail .tix__content .show_detail .btnMuaVe {
+  font-size: 16px;
+  border-radius: 4px;
+  text-align: center;
+  background: 0 0;
+  padding: 7px 25px;
+  transition: all .2s;
+  margin-top: 25px;
+  margin-bottom: 20px;
+  background-color: #fb4226;
+  border: none;
+  color: #fff;
+}
+
+.tix__detail .tix__content .show_detail .btnMuaVe:hover {
+  background-color: #b42a14;
+}
+
+.tix__detail .tix__content .circleStar {
+  text-align: center;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.tix__detail .tix__content .circleStar .c100 {
+  position: relative;
+  font-size: 126px;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.tix__detail .tix__content .circleStar .c100 span {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  line-height: 2.4em;
+  font-size: .42em;
+  color: #fff;
+  display: block;
+  text-align: center;
+  white-space: nowrap;
+  transition-property: all;
+  transition-duration: .2s;
+  transition-timing-function: ease-out;
+}
+
+.tix__detail .tix__content .circleStar .c100 .slice {
+  clip: rect(auto, auto, auto, auto);
+}
+
+.tix__detail .tix__content .circleStar .c100 .slice .bar {
+  position: absolute;
+  border: .06em solid #7ed321;
+  width: 126px;
+  height: 126px;
+  clip: rect(0, 0.5em, 1em, 0);
+  border-radius: 50%;
+}
+
+.tix__detail .tix__content .circleStar .c100 .slice .fill {
+  transform: rotate(180deg);
+}
+
+.tix__detail .tix__content .circleStar .rate {
+  color: #fb4226;
+  font-size: 20px;
+}
+
+.tix__detail .tix__content .circleStar .rate__numOfPeople {
+  color: #e9e9e9;
+}
+
+.detail__showtime {
+  background-color: #0a2029;
+  width: 100%;
+}
+
+.detail__showtime .movieSchedule2__content {
+  max-width: 870px;
+}
+
+.detail__showtime .movieSchedule2__content .nav {
+  border: none;
+}
+
+.detail__showtime .movieSchedule2__content .nav .nav-item .nav-link {
+  border: none;
+  font-size: 20px;
+  color: white;
+  transform: scale(1);
+  transition: all 0.5s;
+}
+
+.detail__showtime .movieSchedule2__content .nav .nav-item .nav-link:hover {
+  transform: scale(1.2);
+  margin-left: 15px;
+  margin-right: 15px;
+  border: none;
+}
+
+.detail__showtime .movieSchedule2__content .nav .nav-item .nav-link:focus {
+  border: none;
+}
+
+.detail__showtime .movieSchedule2__content .nav .nav-item .nav-link.active {
+  color: #fb4226;
+  background: none;
+  transform: scale(1);
+  border: none;
+}
+
+.detail__showtime .movieSchedule2__content .showInfoDetail {
+  max-width: 870px;
+  justify-content: center;
+}
+
+.detail__showtime .movieSchedule2__content .showInfoDetail #lichchieu {
+  background: #fff;
+  margin-top: 40px;
+}
+
+.detail__showtime .movieSchedule2__content .showInfoDetail #lichchieu .movieSchedule2__listImgCinema {
+  min-height: 705px;
+  width: 92px;
+}
+
+.detail__showtime .movieSchedule2__content .showInfoDetail #lichchieu .movieSchedule2__listImgCinema .nav-pills {
+  text-align: center;
+}
+
+.detail__showtime .movieSchedule2__content .showInfoDetail #lichchieu .movieSchedule2__listImgCinema .nav-pills .nav-link.active {
+  opacity: 1;
+}
+
+.detail__showtime .movieSchedule2__content .showInfoDetail #lichchieu .movieSchedule2__listImgCinema .nav-pills .nav-link {
+  background-color: #fff;
+  opacity: .5;
+  padding: 20px;
+  transition: all .2s;
+  border-bottom: 1px solid #ebebec;
+}
+
+.detail__showtime .movieSchedule2__content .showInfoDetail #lichchieu .movieSchedule2__listImgCinema .nav-pills .nav-link img {
+  width: 50px;
+}
+
+.detail__showtime .movieSchedule2__content .showInfoDetail #lichchieu .movieSchedule2__listImgCinema .nav-pills .nav-link:hover {
+  opacity: 1;
+}
+
+.detail__showtime .movieSchedule2__content .showInfoDetail #lichchieu .movieSchedule2__listCinemaAndFilm .nav-tabs {
+  border: none;
+  width: auto;
+  display: block;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.detail__showtime .movieSchedule2__content .showInfoDetail #lichchieu .movieSchedule2__listCinemaAndFilm .nav-tabs .nav-link {
+  color: #000;
+  display: inline-block;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+.detail__showtime .movieSchedule2__content .showInfoDetail #lichchieu .movieSchedule2__listCinemaAndFilm .nav-tabs .nav-link:hover {
+  border: none;
+  border: transparent;
+}
+
+.detail__showtime .movieSchedule2__content .showInfoDetail #lichchieu .movieSchedule2__listCinemaAndFilm .nav-tabs .nav-link.active {
+  background: none;
+  border: none;
+  color: #fb4226;
+}
+
+.detail__showtime .movieSchedule2__content .showInfoDetail #lichchieu .movieSchedule2__listCinemaAndFilm .nav-tabs::-webkit-scrollbar {
+  height: 5px;
+  background-color: #F5F5F5;
+}
+
+.detail__showtime .movieSchedule2__content .showInfoDetail #lichchieu .movieSchedule2__listCinemaAndFilm .nav-tabs::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  background-color: #CCCCCC;
+}
+
+.detail__showtime .movieSchedule2__content .showInfoDetail #lichchieu .movieSchedule2__listCinemaAndFilm .movieSchedule2__film {
+  max-height: 705px;
+  width: calc(100% - 30% - 92px);
+  position: relative;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin: 0 -16px;
+}
+
+.detail__showtime .movieSchedule2__content .showInfoDetail #lichchieu .movieSchedule2__listCinemaAndFilm .movieSchedule2__film .film__item {
+  padding-bottom: 17px;
+  padding-top: 20px;
+  padding-right: 15px;
+  padding-left: 20px;
+  width: 100%;
+  position: relative;
+  margin-bottom: 0;
+  border: none;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+.detail__showtime .movieSchedule2__content .showInfoDetail #lichchieu .movieSchedule2__listCinemaAndFilm .movieSchedule2__film .film__item .film__detailsTop .imgFilm img {
+  width: 50px;
+}
+
+.detail__showtime .movieSchedule2__content .showInfoDetail #lichchieu .movieSchedule2__listCinemaAndFilm .movieSchedule2__film .film__item .film__detailsTop .infoFilm {
+  text-decoration: none;
+}
+
+.detail__showtime .movieSchedule2__content .showInfoDetail #lichchieu .movieSchedule2__listCinemaAndFilm .movieSchedule2__film .film__item .film__detailsTop .infoFilm .film__name {
+  color: #000;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.detail__showtime .movieSchedule2__content .showInfoDetail #lichchieu .movieSchedule2__listCinemaAndFilm .movieSchedule2__film .film__item .film__detailsTop .infoFilm .film__time {
+  color: #949494;
+  font-size: 12px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.detail__showtime .movieSchedule2__content .showInfoDetail #lichchieu .movieSchedule2__listCinemaAndFilm .movieSchedule2__film .film__item .film__detailsBottom .film__detailsBottom__eleP {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  color: #000;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.detail__showtime .movieSchedule2__content .showInfoDetail #lichchieu .movieSchedule2__listCinemaAndFilm .movieSchedule2__film .film__item .film__detailsBottom .film__detailsBottom__eleA {
+  color: #949494;
+  font-size: 12px;
+  font-weight: normal;
+  border: 1px solid #e4e4e4;
+  padding: 5px 15px;
+  transition: all 0.2s;
+  text-decoration: none;
+  text-align: center;
+  background-color: rgba(246, 246, 246, 0.5);
+  border-radius: 7px;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.detail__showtime .movieSchedule2__content .showInfoDetail #lichchieu .movieSchedule2__listCinemaAndFilm .movieSchedule2__film .film__item .film__detailsBottom .film__detailsBottom__eleA .film__detailsBottom__eleSpan {
+  color: #108f3e;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.detail__showtime .movieSchedule2__content .showInfoDetail #lichchieu .movieSchedule2__listCinemaAndFilm .movieSchedule2__film .film__item .film__detailsBottom .film__detailsBottom__eleA .film__detailsBottom__eleSpan:hover {
+  color: #fb4226;
+}
+
+.detail__showtime .movieSchedule2__content .showInfoDetail #lichchieu .movieSchedule2__listCinemaAndFilm .movieSchedule2__film::-webkit-scrollbar {
+  width: 5px;
+  background-color: #F5F5F5;
+}
+
+.detail__showtime .movieSchedule2__content .showInfoDetail #lichchieu .movieSchedule2__listCinemaAndFilm .movieSchedule2__film::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  background-color: #CCCCCC;
+}
+
+.detail__showtime .movieSchedule2__content .showInfoDetail #thongtin .detailMainStyle {
+  margin-top: 40px;
+}
+
+.detail__showtime .movieSchedule2__content .showInfoDetail #thongtin .detailMainStyle .detailLeft .rowLeftInfo {
+  margin-bottom: 10px;
+}
+
+.detail__showtime .movieSchedule2__content .showInfoDetail #thongtin .detailMainStyle .detailLeft .rowLeftInfo .contentTitle {
+  width: 35%;
+  float: left;
+  font-size: 14px;
+  color: #fff;
+}
+
+.detail__showtime .movieSchedule2__content .showInfoDetail #thongtin .detailMainStyle .detailLeft .rowLeftInfo .contentInfo {
+  color: #e9e9e9;
+  width: 40%;
+  float: left;
+  font-size: 14px;
+}
+
+.detail__showtime .movieSchedule2__content .showInfoDetail #thongtin .detailMainStyle .detailRight {
+  padding-left: 10px;
+}
+
+.detail__showtime .movieSchedule2__content .showInfoDetail #thongtin .detailMainStyle .detailRight .rowLeftInfo {
+  margin-bottom: 10px;
+}
+
+.detail__showtime .movieSchedule2__content .showInfoDetail #thongtin .detailMainStyle .detailRight .rowLeftInfo .contentTitle {
+  color: #fff;
+  width: 35%;
+  float: left;
+  font-size: 14px;
+}
+
+.detail__showtime .movieSchedule2__content .showInfoDetail #thongtin .detailMainStyle .detailRight .rowLeftInfo .contentInfoFull {
+  text-align: justify;
+  width: 100%;
+  float: left;
+  font-size: 14px;
+  color: #e9e9e9;
+}
+
+.detail__showtime .movieSchedule2__content .showInfoDetail #danhgia .btnModalInpRate {
+  max-width: 580px;
+  margin: 15px calc(50% - 290px) 0;
+}
+
+.detail__showtime .movieSchedule2__content .showInfoDetail #danhgia .btnModalInpRate .btnInputYourComment {
+  width: 100%;
+  background: #fff;
+  border-radius: 4px;
+  padding: 10px 10px;
+  position: relative;
+  height: 40px;
+}
+
+.detail__showtime .movieSchedule2__content .showInfoDetail #danhgia .btnModalInpRate .btnInputYourComment .imgRate {
+  position: absolute;
+  top: 6%;
+  left: 3%;
+}
+
+.detail__showtime .movieSchedule2__content .showInfoDetail #danhgia .btnModalInpRate .btnInputYourComment .imgRate img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+
+.detail__showtime .movieSchedule2__content .showInfoDetail #danhgia .btnModalInpRate .btnInputYourComment .inpRate {
+  color: #9b9b9b;
+  font-size: 14px;
+  position: absolute;
+  left: 11%;
+}
+
+.detail__showtime .movieSchedule2__content .showInfoDetail #danhgia .btnModalInpRate .btnInputYourComment .starRate {
+  position: absolute;
+  left: 82%;
+}
+
+.detail__showtime .movieSchedule2__content .showInfoDetail #danhgia .reviewers {
+  border: 1px solid #e6e6e6;
+  border-bottom: none;
+  border-radius: 3px;
+  margin: 15px calc(50% - 290px) 0;
+  background-color: #fff;
+  max-width: 580px;
+}
+
+.detail__showtime .movieSchedule2__content .showInfoDetail #danhgia .reviewers .dadCommentReviewer {
+  position: relative;
+  float: left;
+  width: 100%;
+  padding: 20px 20px 12px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.detail__showtime .movieSchedule2__content .showInfoDetail #danhgia .reviewers .dadCommentReviewer .dadMainInfo {
+  margin: 0;
+  margin-bottom: 10px;
+  justify-content: space-between;
+}
+
+.detail__showtime .movieSchedule2__content .showInfoDetail #danhgia .reviewers .dadCommentReviewer .dadMainInfo .infoReviewer {
+  float: left;
+  text-decoration: none;
+  display: inline-block;
+  width: 50%;
+}
+
+.detail__showtime .movieSchedule2__content .showInfoDetail #danhgia .reviewers .dadCommentReviewer .dadMainInfo .infoReviewer .infoReviewerIcon {
+  float: left;
+}
+
+.detail__showtime .movieSchedule2__content .showInfoDetail #danhgia .reviewers .dadCommentReviewer .dadMainInfo .infoReviewer .infoReviewerIcon img {
+  height: 32px;
+  width: 32px;
+  border-radius: 25px;
+}
+
+.detail__showtime .movieSchedule2__content .showInfoDetail #danhgia .reviewers .dadCommentReviewer .dadMainInfo .infoReviewer .infoReviewerName {
+  margin-left: 10px;
+  color: #000;
+}
+
+.detail__showtime .movieSchedule2__content .showInfoDetail #danhgia .reviewers .dadCommentReviewer .dadMainInfo .infoReviewer .infoReviewerName .infoReviewerTime {
+  font-size: 10px;
+  color: #9b9b9b;
+  line-height: 1;
+}
+
+.detail__showtime .movieSchedule2__content .showInfoDetail #danhgia .reviewers .dadCommentReviewer .dadMainInfo .infoStar {
+  display: inline-block;
+  float: right;
+  width: 50%;
+}
+
+.detail__showtime .movieSchedule2__content .showInfoDetail #danhgia .reviewers .dadCommentReviewer .dadMainInfo .infoStar .core {
+  color: #91d25a;
+  font-size: 16px;
+  margin: auto;
+}
+
+.detail__showtime .movieSchedule2__content .showInfoDetail #danhgia .reviewers .dadCommentReviewer .dadMainInfo .infoStar .core p {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.detail__showtime .movieSchedule2__content .showInfoDetail #danhgia .reviewers .dadCommentReviewer .dadMainComment {
+  position: relative;
+}
+
+.detail__showtime .movieSchedule2__content .showInfoDetail #danhgia .reviewers .dadCommentReviewer .dadMainComment .mainComment {
+  padding: 20px 0;
+  font-size: 14px;
+  color: #4a4a4a;
+  letter-spacing: -.2px;
+  border-radius: 4px;
+  overflow-x: hidden;
+}
+
+.detail__showtime .movieSchedule2__content .showInfoDetail #danhgia .reviewers .listReply {
+  width: 100%;
+  float: left;
+  background-color: #f7fcff;
+}
+
+.detail__showtime .movieSchedule2__content .showInfoDetail #danhgia .modalRate .modal-body .btnClose {
+  position: absolute;
+  right: 3%;
+  top: 0;
+  background: none;
+  font-size: 20px;
+  color: #a9a3a3;
+  border: none;
+}
+
+.detail__showtime .movieSchedule2__content .showInfoDetail #danhgia .modalRate .modal-body .rowCore {
+  font-size: 40px;
+  color: #7ed321;
+  justify-content: center;
+}
+
+.detail__showtime .movieSchedule2__content .showInfoDetail #danhgia .modalRate .modal-body .rowStar {
+  font-size: 40px;
+  color: red;
+  justify-content: center;
+}
+
+.detail__showtime .movieSchedule2__content .showInfoDetail #danhgia .modalRate .modal-body .rowInp .inputComment {
+  padding: 20px;
+  margin: 20px;
+  border-radius: 4px;
+  width: 740px;
+  border: 1px solid #e8e8e9;
+  background: #fff;
+  resize: none;
+  font-size: 16px;
+}
+
+.detail__showtime .movieSchedule2__content .showInfoDetail #danhgia .modalRate .modal-body .rowInp .inputComment:focus {
+  outline-width: 0;
+  border-color: #fb4226 !important;
+  box-shadow: 0 14px 28px rgba(247, 156, 194, 0.25), 0 3px 3px rgba(245, 87, 179, 0.22);
+}
+
+.detail__showtime .movieSchedule2__content .showInfoDetail #danhgia .modalRate .modal-body .rowPost {
+  margin-left: 6px;
+}
+
+.detail__showtime .movieSchedule2__content .showInfoDetail #danhgia .modalRate .modal-body .rowPost .btnDang {
+  position: absolute;
+  right: 3%;
+  background-color: #fb4226;
+  border-color: #fb4226;
+  color: #fff;
+  background-image: linear-gradient(-226deg, #fb4226 11%, #be2912 100%);
+  padding: 6px 20px;
+  border-radius: 3px;
+}
+
+.detail__showtime .movieSchedule2__content .showInfoDetail #danhgia .modal-footer {
+  border-top: none;
+}
+/*# sourceMappingURL=main.css.map */

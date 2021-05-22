@@ -1,0 +1,8 @@
+.scheduleFilm__btnGreen{
+    @include styleText($color-white-0, $fs-0, $fw-bold);
+    @include styleButton(inline-block,47px,20px,$color-green-0,4px,center,10px);
+}
+.scheduleFilm__btnRed{
+    @include styleText($color-white-0, $fs-0, $fw-bold);
+    @include styleButton(inline-block,47px,20px,$color-red-0,4px,center,10px);
+}

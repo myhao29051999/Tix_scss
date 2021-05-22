@@ -1,0 +1,53 @@
+//variable color
+$color-black-0: #000;
+$color-red-0:#fb4226;
+$color-red-1:#fa5238;
+$color-red-2:#ce3017;
+$color-gray-0:#9b9b9b;
+$color-gray-1:#4a4a4a;
+$color-gray-2:#949494;
+$color-gray-3:#333;//color của body
+$color-white-0:#fff;
+$color-blue-0:#60c5ef;
+$color-green-0:#00ac4d;
+$color-green-1:#8bc541;
+$color-green-2:#108f3e;
+//variable font-size
+$fs-0:14px;
+$fs-1:13px;
+$fs-2:18px;
+$fs-3:24px;
+$fs-4:16px;
+$fs-5:12px;
+$fs-6:15px;
+$fs-7:20px;
+//variable font-weight
+$fw-normal: normal;
+$fw-bold-0: 600;
+$fw-bold-1: 700;
+$fw-bold-2: 500;
+$fw-bold: bold;
+//variable margin
+$mg-0:20px;
+$pd-1:10px;
+$mg-1:5px;
+//variable padding
+$pd-0:20px;
+$pd-1:10px;
+$pd-2:15px;
+//variable screen responsive
+$breakpoints:(
+    'medium':768px,
+    'medium-737':737px,
+    'small-578':578px,
+    'large-992':992px,
+    'extra-large-1200':1200px,
+    'extra-large-1022':1022px,
+
+    'large-991':991px,
+    'medium-868':868px,
+    'small-767':767px,
+    'small':576px,
+
+)
+

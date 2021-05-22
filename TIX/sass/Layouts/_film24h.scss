@@ -1,0 +1,327 @@
+.film24h {
+    padding:50px;
+    .mainMaxWidth {
+        max-width: 940px;
+        float: none;
+        margin: auto;
+        clear: both;
+    }
+    .block {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .homeNews {
+        background-image: url(../img/back-news.png);
+        padding-top: 120px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        .banner-ads {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            cursor: pointer;
+        }
+        .nav {
+            .nav-item {
+                .nav-link {
+                    @include styleText($color-black-0, $fs-7, $fw-bold);
+                    font-family: "SF Medium";
+                    margin-right: 10px;
+                    transform: translateX(0);
+                }
+                .nav-link.active {
+                    @include styleText($color-red-1, $fs-3, $fw-bold);
+                }
+            }
+            .nav-item:nth-child(2) {
+                margin-top: 4px;
+                .nav-link {
+                    transform: scale(1);
+                    transition: all 0.5s;
+                    &:hover {
+                        transform: scale(1.2);
+                        margin-left: 15px;
+                    }
+                }
+            }
+            .nav-item:nth-child(3) {
+                margin-top: 4px;
+                .nav-link {
+                    transform: scale(1);
+                    transition: all 0.5s;
+                    &:hover {
+                        transform: scale(1.2);
+                        margin-left: 15px;
+                    }
+                }
+            }
+        }
+        .showingNews {
+            .tab-content {
+                .showingNews_tab1 {
+                    /* chia cột */
+                    display: grid;
+                    /* Chia cột- mỗi cột có kích thước bằng nhau nên dùng 1/4 */
+                    grid-template-columns: repeat(2, 1fr);
+                    /* cách đều các mặt tiếp xúc */
+                    gap: 20px 25px;
+                    margin: 0 auto;
+
+                    .thumbnailGeneral {
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 4px;
+                            transition: all 0.2s;
+                            top: 0;
+                            left: 0;
+                            line-height: 20px;
+                        }
+                    }
+                    a {
+                        text-decoration: none;
+                        cursor: pointer;
+                    }
+                    .newsTitle {
+                        line-height: 20px;
+                        font-family: "SF Medium";
+                        height: 42px;
+                        font-size: 17px;
+                        margin-bottom: 15px;
+                        color: black;
+                        font-weight: 700;
+                        padding: 10px 0;
+                    }
+                    .newsTitle:hover {
+                        color: red;
+                    }
+
+                    .newsDescription {
+                        text-align: justify;
+                        font-size: 14px;
+                        color: #4a4a4a;
+                        font-family: "SF Regular";
+                        padding: 0 5px 0 0;
+                        line-height: 19px;
+                        height: 55px;
+                        margin-bottom: 15px;
+                        overflow: hidden;
+                    }
+                    .blockIconFacebook {
+                        float: left;
+                        width: 100%;
+                        height: 25px;
+                        padding-left: 0;
+                        .wrapIcon {
+                            display: inline-table;
+                            margin-right: 25px;
+                            cursor: pointer;
+
+                            .iconFacebook {
+                                margin-right: 10px;
+                                margin-top: 2px;
+                                height: auto;
+                                width: 18px;
+                            }
+                            .amount {
+                                color: #bbb;
+                                font-size: 12px;
+                                line-height: 1;
+                                display: table-cell;
+                                vertical-align: middle;
+                            }
+                            .comment {
+                                display: table-cell;
+                            }
+                        }
+                    }
+                }
+                .showingNews_tab2 {
+                    /* chia cột */
+                    display: grid;
+                    /* Chia cột- mỗi cột có kích thước bằng nhau nên dùng 1/4 */
+                    grid-template-columns: repeat(3, 1fr);
+                    /* cách đều các mặt tiếp xúc */
+                    gap: 20px 25px;
+                    margin: 0 auto;
+                    padding: 20px 0;
+
+                    .thumbnailGeneral {
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 4px;
+                            transition: all 0.2s;
+                            top: 0;
+                            left: 0;
+                            line-height: 20px;
+                        }
+                    }
+                    a {
+                        text-decoration: none;
+                        cursor: pointer;
+                    }
+                    .newsTitle {
+                        line-height: 20px;
+                        font-family: "SF Medium";
+                        height: 47px;
+                        font-size: 16px;
+                        color: black;
+                        font-weight: 700;
+                        padding: 10px 0;
+                        display: -webkit-box;
+                        overflow: hidden;
+                    }
+                    .newsTitle:hover {
+                        color: red;
+                    }
+
+                    .newsDescription {
+                        text-align: justify;
+                        font-size: 14px;
+                        color: #4a4a4a;
+                        font-family: "SF Regular";
+                        padding: 0 5px 0 0;
+                        line-height: 19px;
+                        height: 55px;
+                        margin-bottom: 15px;
+                        overflow: hidden;
+                    }
+                    .blockIconFacebook {
+                        float: left;
+                        width: 100%;
+                        height: 25px;
+                        padding-left: 0;
+                        .wrapIcon {
+                            display: inline-table;
+                            margin-right: 25px;
+                            cursor: pointer;
+
+                            .iconFacebook {
+                                margin-right: 10px;
+                                margin-top: 2px;
+                                height: auto;
+                                width: 18px;
+                            }
+                            .amount {
+                                color: #bbb;
+                                font-size: 12px;
+                                line-height: 1;
+                                display: table-cell;
+                                vertical-align: middle;
+                            }
+                            .comment {
+                                display: table-cell;
+                            }
+                        }
+                    }
+                    .news_right {
+                        display: grid;
+                        grid-template-columns: repeat(2, 4fr);
+                        margin: 0 auto;
+                        .general_news {
+                            img {
+                                width: 50px;
+                                height: 50px;
+                                border-radius: 4px;
+                            }
+                        }
+                        .h_title {
+                            margin-left: -85px;
+                            opacity: 0.6;
+                            font-family: "SF Regular";
+                        }
+                    }
+                }
+                .wrapButtonSeeMoreNews {
+                    .btnViewMore {
+                        font-size: 14px;
+                        color: #949494;
+                        font-family: "SF Regular";
+                        border: 1px solid #949494;
+                        border-radius: 4px;
+                        text-align: center;
+                        background: 0 0;
+                        padding: 7px 25px;
+                        transition: all 0.2s;
+                        margin: auto;
+                        margin-top: 35px;
+                        margin-bottom: 45px;
+                        display: block;
+                    }
+                    .btnViewMore:hover {
+                        background-color: #fb4226;
+                        border-color: #fb4226;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.film24h {
+    @include responsive("large") {
+        .homeNews {
+            .showingNews {
+                .tab-content {
+                    .showingNews_tab2 {
+                        .news_right {
+                            margin: auto;
+                            float: left;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include responsive("medium") {
+        .homeNews {
+            .showingNews {
+                .tab-content {
+                    .showingNews_tab2 {
+                        .news_right {
+                            .h_title {
+                                margin-left: -60px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include responsive("small") {
+        .homeNews {
+            padding-top: 90px;
+            .showingNews {
+                .tab-content {
+                    .showingNews_tab1 {
+                        display: inline;
+                        .newsDescription {
+                            margin-top: -20px;
+                        }
+                        .blockIconFacebook {
+                            margin-top: -10px;
+                        }
+                    }
+                    .showingNews_tab2 {
+                        display: inline;
+                        .newsDescription {
+                            margin-top: -10px;
+                        }
+                        .blockIconFacebook {
+                            margin-top: -10px;
+                        }
+                        .news_right {
+                            .h_title {
+                                margin-left: -225px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
